@@ -77,6 +77,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProveedores.Designer.cs">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,9 +142,6 @@
     <None Include="Resources\AppBackground.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\btnLimpiar.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\btnAñadir.png" />
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +170,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\btnVentas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnLimpiar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

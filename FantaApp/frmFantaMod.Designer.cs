@@ -202,7 +202,7 @@
             this.btnModificar.BackgroundImage = global::FantaApp.Properties.Resources.btnGuardar;
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnModificar.InitialImage = null;
-            this.btnModificar.Location = new System.Drawing.Point(9, 265);
+            this.btnModificar.Location = new System.Drawing.Point(15, 265);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(105, 40);
             this.btnModificar.TabIndex = 42;
@@ -215,7 +215,7 @@
             this.btnSalir.BackgroundImage = global::FantaApp.Properties.Resources.btnExit;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSalir.InitialImage = null;
-            this.btnSalir.Location = new System.Drawing.Point(119, 334);
+            this.btnSalir.Location = new System.Drawing.Point(220, 276);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(77, 29);
             this.btnSalir.TabIndex = 41;
@@ -228,9 +228,9 @@
             this.btnLimpiar.BackgroundImage = global::FantaApp.Properties.Resources.btnLimpiar;
             this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnLimpiar.InitialImage = null;
-            this.btnLimpiar.Location = new System.Drawing.Point(192, 265);
+            this.btnLimpiar.Location = new System.Drawing.Point(136, 265);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(105, 40);
+            this.btnLimpiar.Size = new System.Drawing.Size(48, 40);
             this.btnLimpiar.TabIndex = 39;
             this.btnLimpiar.TabStop = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -240,7 +240,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(313, 380);
+            this.ClientSize = new System.Drawing.Size(313, 325);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnModificar);
