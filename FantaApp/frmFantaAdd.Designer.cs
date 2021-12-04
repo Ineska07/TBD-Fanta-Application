@@ -52,30 +52,30 @@
             // 
             // txtExistencia
             // 
-            this.txtExistencia.Location = new System.Drawing.Point(122, 147);
+            this.txtExistencia.Location = new System.Drawing.Point(247, 58);
             this.txtExistencia.Name = "txtExistencia";
-            this.txtExistencia.Size = new System.Drawing.Size(119, 20);
+            this.txtExistencia.Size = new System.Drawing.Size(77, 20);
             this.txtExistencia.TabIndex = 3;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(122, 198);
+            this.txtPrecio.Location = new System.Drawing.Point(268, 94);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(117, 20);
+            this.txtPrecio.Size = new System.Drawing.Size(56, 20);
             this.txtPrecio.TabIndex = 4;
             // 
             // txtTamaño
             // 
-            this.txtTamaño.Location = new System.Drawing.Point(122, 101);
+            this.txtTamaño.Location = new System.Drawing.Point(64, 94);
             this.txtTamaño.Name = "txtTamaño";
-            this.txtTamaño.Size = new System.Drawing.Size(141, 20);
+            this.txtTamaño.Size = new System.Drawing.Size(108, 20);
             this.txtTamaño.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(22, 150);
+            this.label3.Location = new System.Drawing.Point(186, 61);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 12;
@@ -85,34 +85,34 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(22, 201);
+            this.label2.Location = new System.Drawing.Point(186, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 13);
+            this.label2.Size = new System.Drawing.Size(76, 13);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Precio por Unidad";
+            this.label2.Text = "Precio Unitario";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(22, 104);
+            this.label1.Location = new System.Drawing.Point(12, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Cap. Envase";
+            this.label1.Text = "Tamaño";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(122, 58);
+            this.txtNombre.Location = new System.Drawing.Point(62, 58);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(139, 20);
+            this.txtNombre.Size = new System.Drawing.Size(110, 20);
             this.txtNombre.TabIndex = 1;
             // 
             // lblFantaNombre
             // 
             this.lblFantaNombre.AutoSize = true;
             this.lblFantaNombre.ForeColor = System.Drawing.Color.White;
-            this.lblFantaNombre.Location = new System.Drawing.Point(22, 61);
+            this.lblFantaNombre.Location = new System.Drawing.Point(12, 61);
             this.lblFantaNombre.Name = "lblFantaNombre";
             this.lblFantaNombre.Size = new System.Drawing.Size(44, 13);
             this.lblFantaNombre.TabIndex = 8;
@@ -124,9 +124,9 @@
             this.btnSalir.BackgroundImage = global::FantaApp.Properties.Resources.btnExit;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSalir.InitialImage = null;
-            this.btnSalir.Location = new System.Drawing.Point(220, 346);
+            this.btnSalir.Location = new System.Drawing.Point(260, 209);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(77, 40);
+            this.btnSalir.Size = new System.Drawing.Size(64, 30);
             this.btnSalir.TabIndex = 17;
             this.btnSalir.TabStop = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -136,7 +136,7 @@
             this.lblFantaAdd.AutoSize = true;
             this.lblFantaAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFantaAdd.ForeColor = System.Drawing.Color.White;
-            this.lblFantaAdd.Location = new System.Drawing.Point(102, 12);
+            this.lblFantaAdd.Location = new System.Drawing.Point(12, 9);
             this.lblFantaAdd.Name = "lblFantaAdd";
             this.lblFantaAdd.Size = new System.Drawing.Size(109, 16);
             this.lblFantaAdd.TabIndex = 18;
@@ -144,16 +144,16 @@
             // 
             // txtProveedor
             // 
-            this.txtProveedor.Location = new System.Drawing.Point(122, 244);
+            this.txtProveedor.Location = new System.Drawing.Point(74, 148);
             this.txtProveedor.Name = "txtProveedor";
-            this.txtProveedor.Size = new System.Drawing.Size(117, 20);
+            this.txtProveedor.Size = new System.Drawing.Size(98, 20);
             this.txtProveedor.TabIndex = 5;
             // 
             // lblProveedor
             // 
             this.lblProveedor.AutoSize = true;
             this.lblProveedor.ForeColor = System.Drawing.Color.White;
-            this.lblProveedor.Location = new System.Drawing.Point(22, 247);
+            this.lblProveedor.Location = new System.Drawing.Point(12, 151);
             this.lblProveedor.Name = "lblProveedor";
             this.lblProveedor.Size = new System.Drawing.Size(56, 13);
             this.lblProveedor.TabIndex = 19;
@@ -161,16 +161,16 @@
             // 
             // txtCategoria
             // 
-            this.txtCategoria.Location = new System.Drawing.Point(122, 290);
+            this.txtCategoria.Location = new System.Drawing.Point(247, 148);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(117, 20);
+            this.txtCategoria.Size = new System.Drawing.Size(77, 20);
             this.txtCategoria.TabIndex = 6;
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.ForeColor = System.Drawing.Color.White;
-            this.lblCategoria.Location = new System.Drawing.Point(22, 293);
+            this.lblCategoria.Location = new System.Drawing.Point(189, 151);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(52, 13);
             this.lblCategoria.TabIndex = 21;
@@ -179,12 +179,12 @@
             // btnAñadir
             // 
             this.btnAñadir.BackColor = System.Drawing.Color.Transparent;
-            this.btnAñadir.BackgroundImage = global::FantaApp.Properties.Resources.btnAñadir;
+            this.btnAñadir.BackgroundImage = global::FantaApp.Properties.Resources.btnGuardar;
             this.btnAñadir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAñadir.InitialImage = null;
-            this.btnAñadir.Location = new System.Drawing.Point(12, 354);
+            this.btnAñadir.Location = new System.Drawing.Point(16, 207);
             this.btnAñadir.Name = "btnAñadir";
-            this.btnAñadir.Size = new System.Drawing.Size(105, 32);
+            this.btnAñadir.Size = new System.Drawing.Size(88, 32);
             this.btnAñadir.TabIndex = 23;
             this.btnAñadir.TabStop = false;
             this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
@@ -195,9 +195,9 @@
             this.btnLimpiar.BackgroundImage = global::FantaApp.Properties.Resources.btnLimpiar;
             this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnLimpiar.InitialImage = null;
-            this.btnLimpiar.Location = new System.Drawing.Point(12, 316);
+            this.btnLimpiar.Location = new System.Drawing.Point(110, 207);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(105, 32);
+            this.btnLimpiar.Size = new System.Drawing.Size(51, 32);
             this.btnLimpiar.TabIndex = 24;
             this.btnLimpiar.TabStop = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -205,8 +205,8 @@
             // lblErrorVacio
             // 
             this.lblErrorVacio.AutoSize = true;
-            this.lblErrorVacio.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorVacio.Location = new System.Drawing.Point(133, 316);
+            this.lblErrorVacio.ForeColor = System.Drawing.Color.Yellow;
+            this.lblErrorVacio.Location = new System.Drawing.Point(160, 32);
             this.lblErrorVacio.Name = "lblErrorVacio";
             this.lblErrorVacio.Size = new System.Drawing.Size(164, 13);
             this.lblErrorVacio.TabIndex = 25;
@@ -218,7 +218,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(309, 398);
+            this.ClientSize = new System.Drawing.Size(338, 258);
             this.Controls.Add(this.lblErrorVacio);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnAñadir);

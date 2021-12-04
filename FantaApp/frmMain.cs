@@ -10,8 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-//Wenas
-
 namespace FantaApp
 {
     public partial class frmMain : Form

@@ -32,22 +32,20 @@ namespace FantaApp
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.lblWIP = new System.Windows.Forms.Label();
             this.gbxConsultas = new System.Windows.Forms.GroupBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnOpenVentas = new System.Windows.Forms.PictureBox();
             this.btnOpenCompradores = new System.Windows.Forms.PictureBox();
             this.btnOpenFanta = new System.Windows.Forms.PictureBox();
+            this.btnEmpleados = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.pbxLogotipo = new System.Windows.Forms.PictureBox();
             this.btnHelp = new System.Windows.Forms.PictureBox();
             this.gbxConsultas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOpenVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOpenCompradores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOpenFanta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogotipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).BeginInit();
@@ -67,9 +65,7 @@ namespace FantaApp
             // gbxConsultas
             // 
             this.gbxConsultas.BackColor = System.Drawing.Color.Transparent;
-            this.gbxConsultas.Controls.Add(this.pictureBox3);
             this.gbxConsultas.Controls.Add(this.pictureBox2);
-            this.gbxConsultas.Controls.Add(this.pictureBox1);
             this.gbxConsultas.Controls.Add(this.btnOpenVentas);
             this.gbxConsultas.Controls.Add(this.btnOpenCompradores);
             this.gbxConsultas.Controls.Add(this.btnOpenFanta);
@@ -81,33 +77,15 @@ namespace FantaApp
             this.gbxConsultas.TabStop = false;
             this.gbxConsultas.Text = "Consultas";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(341, 114);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = global::FantaApp.Properties.Resources.btnOrdenes;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(154, 114);
+            this.pictureBox2.Location = new System.Drawing.Point(128, 23);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 35);
+            this.pictureBox2.Size = new System.Drawing.Size(113, 42);
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::FantaApp.Properties.Resources.btnEmpleados;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 114);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(115, 35);
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
             // 
             // btnOpenVentas
             // 
@@ -115,9 +93,9 @@ namespace FantaApp
             this.btnOpenVentas.BackgroundImage = global::FantaApp.Properties.Resources.btnVentas;
             this.btnOpenVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnOpenVentas.InitialImage = null;
-            this.btnOpenVentas.Location = new System.Drawing.Point(277, 42);
+            this.btnOpenVentas.Location = new System.Drawing.Point(186, 129);
             this.btnOpenVentas.Name = "btnOpenVentas";
-            this.btnOpenVentas.Size = new System.Drawing.Size(93, 35);
+            this.btnOpenVentas.Size = new System.Drawing.Size(112, 42);
             this.btnOpenVentas.TabIndex = 11;
             this.btnOpenVentas.TabStop = false;
             this.btnOpenVentas.Click += new System.EventHandler(this.btnOpenVentas_Click);
@@ -128,9 +106,9 @@ namespace FantaApp
             this.btnOpenCompradores.BackgroundImage = global::FantaApp.Properties.Resources.btnCompradores;
             this.btnOpenCompradores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnOpenCompradores.InitialImage = null;
-            this.btnOpenCompradores.Location = new System.Drawing.Point(121, 42);
+            this.btnOpenCompradores.Location = new System.Drawing.Point(14, 129);
             this.btnOpenCompradores.Name = "btnOpenCompradores";
-            this.btnOpenCompradores.Size = new System.Drawing.Size(133, 35);
+            this.btnOpenCompradores.Size = new System.Drawing.Size(154, 42);
             this.btnOpenCompradores.TabIndex = 10;
             this.btnOpenCompradores.TabStop = false;
             this.btnOpenCompradores.Click += new System.EventHandler(this.btnOpenCompradores_Click);
@@ -141,12 +119,22 @@ namespace FantaApp
             this.btnOpenFanta.BackgroundImage = global::FantaApp.Properties.Resources.BtnFanta;
             this.btnOpenFanta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnOpenFanta.InitialImage = null;
-            this.btnOpenFanta.Location = new System.Drawing.Point(15, 42);
+            this.btnOpenFanta.Location = new System.Drawing.Point(14, 23);
             this.btnOpenFanta.Name = "btnOpenFanta";
-            this.btnOpenFanta.Size = new System.Drawing.Size(85, 35);
+            this.btnOpenFanta.Size = new System.Drawing.Size(97, 42);
             this.btnOpenFanta.TabIndex = 9;
             this.btnOpenFanta.TabStop = false;
             this.btnOpenFanta.Click += new System.EventHandler(this.btnOpenFanta_Click);
+            // 
+            // btnEmpleados
+            // 
+            this.btnEmpleados.BackgroundImage = global::FantaApp.Properties.Resources.btnEmpleados;
+            this.btnEmpleados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEmpleados.Location = new System.Drawing.Point(189, 12);
+            this.btnEmpleados.Name = "btnEmpleados";
+            this.btnEmpleados.Size = new System.Drawing.Size(138, 42);
+            this.btnEmpleados.TabIndex = 12;
+            this.btnEmpleados.TabStop = false;
             // 
             // btnSalir
             // 
@@ -167,7 +155,7 @@ namespace FantaApp
             this.pbxLogotipo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbxLogotipo.BackgroundImage")));
             this.pbxLogotipo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxLogotipo.InitialImage = null;
-            this.pbxLogotipo.Location = new System.Drawing.Point(170, 12);
+            this.pbxLogotipo.Location = new System.Drawing.Point(12, 12);
             this.pbxLogotipo.Name = "pbxLogotipo";
             this.pbxLogotipo.Size = new System.Drawing.Size(160, 100);
             this.pbxLogotipo.TabIndex = 4;
@@ -193,6 +181,7 @@ namespace FantaApp
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(498, 369);
             this.Controls.Add(this.gbxConsultas);
+            this.Controls.Add(this.btnEmpleados);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblWIP);
             this.Controls.Add(this.pbxLogotipo);
@@ -206,12 +195,11 @@ namespace FantaApp
             this.Text = "Fanta";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.gbxConsultas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOpenVentas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOpenCompradores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOpenFanta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEmpleados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogotipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).EndInit();
@@ -230,9 +218,8 @@ namespace FantaApp
         private System.Windows.Forms.PictureBox btnOpenVentas;
         private System.Windows.Forms.PictureBox btnOpenCompradores;
         private System.Windows.Forms.PictureBox btnOpenFanta;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnEmpleados;
     }
 }
 

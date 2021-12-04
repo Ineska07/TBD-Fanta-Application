@@ -124,9 +124,9 @@
             // 
             // txtTamaño
             // 
-            this.txtTamaño.Location = new System.Drawing.Point(215, 79);
+            this.txtTamaño.Location = new System.Drawing.Point(191, 79);
             this.txtTamaño.Name = "txtTamaño";
-            this.txtTamaño.Size = new System.Drawing.Size(82, 20);
+            this.txtTamaño.Size = new System.Drawing.Size(106, 20);
             this.txtTamaño.TabIndex = 27;
             // 
             // label3
@@ -155,9 +155,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(141, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 33;
-            this.label1.Text = "Cap. Envase";
+            this.label1.Text = "Tamaño";
             // 
             // txtNombre
             // 
@@ -180,10 +180,10 @@
             // 
             this.txtID.Enabled = false;
             this.txtID.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtID.Location = new System.Drawing.Point(45, 43);
+            this.txtID.Location = new System.Drawing.Point(36, 43);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(90, 20);
+            this.txtID.Size = new System.Drawing.Size(99, 20);
             this.txtID.TabIndex = 43;
             // 
             // lblID
