@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
 //HOLA PORFAVOR ACTUALIZATEEEEEE
+//AHORA TOCA IMPORTAR, SOS PLAN
 
 namespace FantaApp
 {
