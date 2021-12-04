@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28534077-6163-4362-B2C1-E7D9176D14DD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FantaApp</RootNamespace>
+    <AssemblyName>FantaApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BD.cs" />
+    <Compile Include="frmComprador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComprador.Designer.cs">
+      <DependentUpon>frmComprador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFanta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFanta.Designer.cs">
+      <DependentUpon>frmFanta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFantaAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFantaAdd.Designer.cs">
+      <DependentUpon>frmFantaAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFantaMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFantaMod.Designer.cs">
+      <DependentUpon>frmFantaMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmComprador.resx">
+      <DependentUpon>frmComprador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFanta.resx">
+      <DependentUpon>frmFanta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFantaAdd.resx">
+      <DependentUpon>frmFantaAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFantaMod.resx">
+      <DependentUpon>frmFantaMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logotipo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnHelp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AppBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnLimpiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAñadir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnCompradores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnEmpleados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnExit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnFanta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnGuardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnModificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnOrdenes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnPagos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnVentas.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
