@@ -11,7 +11,7 @@ namespace FANTA
 {
     class BD
     {
-        //Comentario XYZ
+        //Comentario XYZ2
         public static SqlConnection conectar()
         {
             SqlConnection bdconectar = new SqlConnection(@"Data Source=DESKTOP-3HAD2EJ;Initial Catalog=FANTA_BD;Integrated Security=True");
