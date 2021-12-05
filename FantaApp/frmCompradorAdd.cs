@@ -23,19 +23,20 @@ namespace FantaApp
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            /*
+            
             if (txtNombre.Text == "" || txtEmail.Text == "" || txtDireccion.Text == "" || txtTelefono.Text == "")
             {
                 lblErrorVacio.Visible = true;
             }
             else
             {
-                string cadenaFanta = "INSERT INTO Cliente (Cliente_ID, Nombre_Cliente, Dirección, Telefono, Email, Empledos_ID) VALUES" +
-                " (" + (Dgv.Rows.Count + 1).ToString() + ", '" + txtNombre.Text + "', " + txtDireccion.Text + ", " + txtTelefono.Text + ", " + txtEmail.Text + ", " + SacarEmpleado().ToString() + ", " + ")";
+                //Falla el Insert
+                string cadenaCliente = "INSERT INTO Cliente (Cliente_ID, Nombre_Cliente, Dirección, Telefono, Email, Empledos_ID) VALUES" +
+                " (" + (Dgv.Rows.Count + 1).ToString() + ", '" + txtNombre.Text + "', '" + txtDireccion.Text + "', " + txtTelefono.Text + ", '" + txtEmail.Text + "', " + "1)";
                 try
                 {
-                    SqlCommand insertFanta = new SqlCommand(cadenaFanta, BD.conectar());
-                    insertFanta.ExecuteNonQuery();
+                    SqlCommand insertCliente = new SqlCommand(cadenaCliente, BD.conectar());
+                    insertCliente.ExecuteNonQuery();
                     BD.conectar().Close();
                     BD bd = new BD();
                     string consulta = "SELECT Nombre_Producto AS 'Nombre', Existencia__Producto AS 'Existencia', Tamaño_Envase AS 'Tamaño', " +
@@ -49,8 +50,7 @@ namespace FantaApp
                     //limpiar(); 
                 }
             }
-
-            */
+           
         }
 
         private void frmCompradorAdd_Load(object sender, EventArgs e)
