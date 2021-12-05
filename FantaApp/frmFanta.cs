@@ -59,15 +59,6 @@ namespace FantaApp
             else
             {
                 int index = dgvBDFanta.CurrentCell.RowIndex;
-
-                /*
-                string[] data = new string[4];
-                for (int i = 0; i < dgvBDFanta.Columns.Count; i++)
-                {
-                    data[i] = dgvBDFanta.Rows[index].Cells[i].Value.ToString().Trim();
-                }
-                */
-
                 frmFantaMod FantasMod = new frmFantaMod(encontrarFila(index));
                 FantasMod.Dgv = dgvBDFanta;
                 FantasMod.Show();

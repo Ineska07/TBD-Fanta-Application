@@ -11,9 +11,12 @@ namespace FANTA
 {
     class BD
     {
+        public string PC { get; set; }
         public static SqlConnection conectar()
         {
-            SqlConnection bdconectar = new SqlConnection(@"Data Source=DESKTOP-3HAD2EJ;Initial Catalog=FANTA_BD;Integrated Security=True");
+            //Deivid = DEIVID-PC
+            //Ines creo = DESKTOP-3HAD2EJ
+            SqlConnection bdconectar = new SqlConnection(@"Data Source=DEIVID-PC;Initial Catalog=FANTA_BD;Integrated Security=True");
             //CAMBIAR LAS CREDENCIALES DE CONEXION POR LAS SUYAS
 
             try

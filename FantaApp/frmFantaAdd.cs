@@ -114,7 +114,6 @@ namespace FantaApp
                 catch (Exception ex)
                 {
                     MessageBox.Show("ERROR, OCURRIO ALGO DURANTE EL INSERT");
-                    limpiar();
                 }
             }
         }

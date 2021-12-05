@@ -49,5 +49,46 @@ namespace FantaApp
         {
             this.Close();
         }
+
+        private string[] encontrarFila(int index)
+        {
+            string encontrar = "Select * FROM Proveedor WHERE Proveedor_ID = " + ((int)index + 1);
+            SqlCommand Fila = new SqlCommand(encontrar, BD.conectar());
+            SqlDataAdapter r = new SqlDataAdapter();
+
+            r.SelectCommand = Fila;
+
+            DataTable datostabla = new DataTable();
+            string[] datos = new string[6];
+
+            r.Fill(datostabla);
+
+            for (int i = 0; i < datostabla.Columns.Count; i++)
+            {
+                datos[i] = datostabla.Rows[0][i].ToString();
+            }
+            return datos;
+        }
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (dgvBDProveedores.SelectedRows == null)
+            {
+                MessageBox.Show("Selecciona una Fila");
+            }
+            else
+            {
+                int index = dgvBDProveedores.CurrentCell.RowIndex;
+                frmProveedorMod ProveedorMod = new frmProveedorMod(encontrarFila(index));
+                ProveedorMod.Dgv = dgvBDProveedores;
+                ProveedorMod.Show();
+            }
+        }
+
+        private void btnAñadir_Click(object sender, EventArgs e)
+        {
+            frmProveedoresAdd ProveedoresAdd = new frmProveedoresAdd();
+            ProveedoresAdd.Dgv = dgvBDProveedores;
+            ProveedoresAdd.Show();
+        }
     }
 }
