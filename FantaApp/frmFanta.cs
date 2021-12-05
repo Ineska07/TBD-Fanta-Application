@@ -50,11 +50,6 @@ namespace FantaApp
             FantasAdd.Show();
         }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-           //Borrar si es posible
-        }
-
         private void btnModificar_Click(object sender, EventArgs e)
         {
             if (dgvBDFanta.SelectedRows == null)

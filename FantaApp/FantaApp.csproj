@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BD.cs" />
+    <Compile Include="frmCompradorAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCompradorAdd.Designer.cs">
+      <DependentUpon>frmCompradorAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmComprador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmComprador.resx">
       <DependentUpon>frmComprador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCompradorAdd.resx">
+      <DependentUpon>frmCompradorAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFanta.resx">
       <DependentUpon>frmFanta.cs</DependentUpon>
@@ -176,6 +185,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\btnLimpiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnProveedores.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

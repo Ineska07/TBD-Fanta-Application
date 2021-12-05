@@ -32,7 +32,7 @@ namespace FantaApp
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
-            consulta = "SELECT NOMBREC AS 'NOMBRE', TELEFONO, DIRECCION FROM COMPRADOR";
+            consulta = "SELECT NOMBRE_CLIENTE AS 'NOMBRE', DIRECCION, TELEFONO, EMAIL FROM CLIENTE";
         }
         private void frmComprador_Load(object sender, EventArgs e)
         {
@@ -47,25 +47,12 @@ namespace FantaApp
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            string cadenaFanta = "INSERT INTO COMPRADOR (IDCOMPRADOR, NOMBREC, TELEFONO, DIRECCION) VALUES " +
-                "(" + dgvBDComprador.Rows.Count.ToString() + ", '" + tbxNombreComprador.Text + "', '" + tbxTelefono.Text + "', '" + tbxDireccion.Text + "')";
-            try
-            {
-                SqlCommand insertFanta = new SqlCommand(cadenaFanta, BD.conectar());
-                insertFanta.ExecuteNonQuery();
-                BD.conectar().Close();
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR, OCURRIO ALGO DURANTE EL INSERT ");
-            }
-
-            BD bd = new BD();
-            bd.VerificarConexion(dgvBDComprador, consulta);
+            frmCompradorAdd CompradorAdd = new frmCompradorAdd();
+            CompradorAdd.Dgv = dgvBDComprador;
+            CompradorAdd.Show();
         }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
 
         }

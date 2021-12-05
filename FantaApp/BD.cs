@@ -13,15 +13,16 @@ namespace FANTA
     {
         public static SqlConnection conectar()
         {
-            SqlConnection bdconectar = new SqlConnection(@"Data Source=DEIVID-PC;Initial Catalog=FANTA_BD;Integrated Security=True");
+            SqlConnection bdconectar = new SqlConnection(@"Data Source=DESKTOP-3HAD2EJ;Initial Catalog=FANTA_BD;Integrated Security=True");
             //CAMBIAR LAS CREDENCIALES DE CONEXION POR LAS SUYAS
+
             try
             {
                 bdconectar.Open();
             }
             catch (Exception e)
             {
-                MessageBox.Show("CONEXIÓN NO ESTABLECIDA");
+                MessageBox.Show("Error en la Conexión /nConexión no Establecida.");
             }
             return bdconectar;
         }
@@ -46,7 +47,7 @@ namespace FANTA
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERROR, OCURRIO ALGO DURANTE LA CONSULTA");
+                MessageBox.Show("Error en la Conexión /nError durante la consulta.");
             }
         }
     }

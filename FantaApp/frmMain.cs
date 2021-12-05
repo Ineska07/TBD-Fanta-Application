@@ -60,8 +60,15 @@ namespace FantaApp
 
         private void btnOpenCompradores_Click(object sender, EventArgs e)
         {
+            //También conocidos como Clientes
             frmComprador Compradores = new frmComprador();
             Compradores.Show();
+        }
+
+        private void btnOpenProveedores_Click(object sender, EventArgs e)
+        {
+            frmProveedores Proveedores = new frmProveedores();
+            Proveedores.Show();
         }
     }
 }

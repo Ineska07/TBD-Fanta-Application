@@ -183,6 +183,16 @@ namespace FantaApp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnProveedores {
+            get {
+                object obj = ResourceManager.GetObject("btnProveedores", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnVentas {
             get {
                 object obj = ResourceManager.GetObject("btnVentas", resourceCulture);

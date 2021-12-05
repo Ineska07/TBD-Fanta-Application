@@ -95,7 +95,7 @@ namespace FantaApp
             if (txtNombre.Text == "" || txtCategoria.Text == "" || txtExistencia.Text == "" || txtPrecio.Text == "" || txtProveedor.Text == "" || txtTamaño.Text == "")
             {
                 lblErrorVacio.Visible = true;
-            } 
+            }
             else
             {
                 string cadenaFanta = "INSERT INTO Producto (Producto_ID, Nombre_Producto, Existencia__Producto, Tamaño_Envase, Precio__Producto, Proveedor_ID, Categoria_ID) VALUES" +
