@@ -39,6 +39,7 @@ namespace FantaApp
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.pbxLogotipo = new System.Windows.Forms.PictureBox();
             this.btnHelp = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnOpenProveedores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOpenVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOpenCompradores)).BeginInit();
@@ -160,12 +161,23 @@ namespace FantaApp
             this.btnHelp.TabStop = false;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(125, 307);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(211, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Hola, solo quiero probar algo con este label";
+            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(495, 369);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOpenProveedores);
             this.Controls.Add(this.btnOpenVentas);
             this.Controls.Add(this.btnOpenCompradores);
@@ -207,6 +219,7 @@ namespace FantaApp
         private System.Windows.Forms.PictureBox btnOpenFanta;
         private System.Windows.Forms.PictureBox btnEmpleados;
         private System.Windows.Forms.PictureBox btnOpenProveedores;
+        private System.Windows.Forms.Label label1;
     }
 }
 
