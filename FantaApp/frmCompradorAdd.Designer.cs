@@ -69,6 +69,7 @@
             this.btnLimpiar.Size = new System.Drawing.Size(51, 32);
             this.btnLimpiar.TabIndex = 41;
             this.btnLimpiar.TabStop = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnGuardar
             // 
@@ -139,6 +140,7 @@
             this.btnSalir.Size = new System.Drawing.Size(64, 30);
             this.btnSalir.TabIndex = 36;
             this.btnSalir.TabStop = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // txtDireccion
             // 
