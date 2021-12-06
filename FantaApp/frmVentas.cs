@@ -33,7 +33,9 @@ namespace FantaApp
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
-            consulta = "SELECT COMPRADOR.NOMBREC AS 'COMPRADOR', FANTA.SABOR, COMPRADOR.TELEFONO AS 'TELÉFONO DE COMPRADOR' FROM COMPRADOR, FANTA, VENTA WHERE VENTA.IDCOMPRADOR = COMPRADOR.IDCOMPRADOR AND VENTA.IDFANTA = FANTA.IDFANTA";
+            consulta = "SELECT COMPRADOR.NOMBREC AS 'COMPRADOR', FANTA.SABOR, COMPRADOR.TELEFONO AS " +
+                "'TELÉFONO DE COMPRADOR' FROM COMPRADOR, FANTA, VENTA WHERE VENTA.IDCOMPRADOR = COMPRADOR.IDCOMPRADOR " +
+                "AND VENTA.IDFANTA = FANTA.IDFANTA";
         }
 
         private void frmVentas_Load(object sender, EventArgs e)

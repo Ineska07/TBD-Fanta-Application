@@ -56,7 +56,7 @@ namespace FantaApp
             this.lblWIP.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblWIP.Location = new System.Drawing.Point(12, 344);
             this.lblWIP.Name = "lblWIP";
-            this.lblWIP.Size = new System.Drawing.Size(92, 13);
+            this.lblWIP.Size = new System.Drawing.Size(122, 17);
             this.lblWIP.TabIndex = 5;
             this.lblWIP.Text = "*Work in Progress";
             // 
@@ -121,6 +121,7 @@ namespace FantaApp
             this.btnEmpleados.Size = new System.Drawing.Size(145, 42);
             this.btnEmpleados.TabIndex = 12;
             this.btnEmpleados.TabStop = false;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
             // btnSalir
             // 
