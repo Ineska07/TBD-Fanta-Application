@@ -82,6 +82,18 @@
     <Compile Include="frmEmpleados.Designer.cs">
       <DependentUpon>frmEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEmpleadosAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpleadosAdd.Designer.cs">
+      <DependentUpon>frmEmpleadosAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpleadosMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpleadosMod.Designer.cs">
+      <DependentUpon>frmEmpleadosMod.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFanta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +171,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmpleados.resx">
       <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleadosAdd.resx">
+      <DependentUpon>frmEmpleadosAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleadosMod.resx">
+      <DependentUpon>frmEmpleadosMod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFanta.resx">
       <DependentUpon>frmFanta.cs</DependentUpon>
