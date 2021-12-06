@@ -70,6 +70,7 @@
     <Compile Include="frmComprador.Designer.cs">
       <DependentUpon>frmComprador.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="frmEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +88,19 @@
     </Compile>
     <Compile Include="frmEmpleadosMod.Designer.cs">
       <DependentUpon>frmEmpleadosMod.cs</DependentUpon>
+=======
+    <Compile Include="frmCompradorMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCompradorMod.Designer.cs">
+      <DependentUpon>frmCompradorMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpleados.Designer.cs">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+>>>>>>> 12494a492ebcfc2ebe19829e1205989e753e8159
     </Compile>
     <Compile Include="frmFanta.cs">
       <SubType>Form</SubType>
@@ -142,6 +156,12 @@
     <Compile Include="frmVentas.Designer.cs">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVentasAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentasAdd.Designer.cs">
+      <DependentUpon>frmVentasAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAdmins.resx">
@@ -149,10 +169,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmComprador.resx">
       <DependentUpon>frmComprador.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCompradorAdd.resx">
       <DependentUpon>frmCompradorAdd.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="frmEmpleados.resx">
       <DependentUpon>frmEmpleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +184,14 @@
     <EmbeddedResource Include="frmEmpleadosMod.resx">
       <DependentUpon>frmEmpleadosMod.cs</DependentUpon>
     </EmbeddedResource>
+=======
+    <EmbeddedResource Include="frmCompradorMod.resx">
+      <DependentUpon>frmCompradorMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleados.resx">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> 12494a492ebcfc2ebe19829e1205989e753e8159
     <EmbeddedResource Include="frmFanta.resx">
       <DependentUpon>frmFanta.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +218,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentasAdd.resx">
+      <DependentUpon>frmVentasAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -267,6 +301,35 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\btnProveedores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

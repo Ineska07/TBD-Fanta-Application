@@ -16,7 +16,8 @@ namespace FANTA
         {
             //Deivid = DEIVID-PC
             //Ines creo = DESKTOP-3HAD2EJ
-            SqlConnection bdconectar = new SqlConnection(@"Data Source=LAPTOP-ECFCGAIF\SQLEXPRESS;Initial Catalog=FANTA_BD;Integrated Security=True");
+            //Erick LAPTOP-UAH2K9FE
+            SqlConnection bdconectar = new SqlConnection(@"Data Source=DESKTOP-3HAD2EJ;Initial Catalog=FANTA_BD;Integrated Security=True");
             //CAMBIAR LAS CREDENCIALES DE CONEXION POR LAS SUYAS
 
             try

@@ -62,8 +62,6 @@ namespace FantaApp
                         limpiar(); 
                     }
                 }
-
-
         }
 
         private void limpiar()
@@ -72,7 +70,6 @@ namespace FantaApp
             txtDireccion.Text = "";
             txtTelefono.Text = "";
             txtEmail.Text = "";
-
         }
 
         private void frmCompradorAdd_Load(object sender, EventArgs e)

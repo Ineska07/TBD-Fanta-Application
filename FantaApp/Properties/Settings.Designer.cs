@@ -12,7 +12,11 @@ namespace FantaApp.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+<<<<<<< HEAD
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
+=======
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.7.0.0")]
+>>>>>>> 12494a492ebcfc2ebe19829e1205989e753e8159
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,8 +30,13 @@ namespace FantaApp.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+<<<<<<< HEAD
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-ECFCGAIF\\SQLEXPRESS;Initial Catalog=FANTA_BD;Integrated Securi" +
             "ty=True")]
+=======
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-UAH2K9FE\\T_BASES_DATOS;Initial Catalog=FANTA_BD;Integrated Sec" +
+            "urity=True")]
+>>>>>>> 12494a492ebcfc2ebe19829e1205989e753e8159
         public string FANTA_BDConnectionString {
             get {
                 return ((string)(this["FANTA_BDConnectionString"]));
