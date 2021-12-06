@@ -40,12 +40,14 @@ namespace FantaApp
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.btnHelp = new System.Windows.Forms.PictureBox();
             this.dgvBDFanta = new System.Windows.Forms.DataGridView();
+            this.btnBorrar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnAñadir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnModificar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogotipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBDFanta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBorrar)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAñadir
@@ -161,12 +163,25 @@ namespace FantaApp
             this.dgvBDFanta.Size = new System.Drawing.Size(771, 296);
             this.dgvBDFanta.TabIndex = 19;
             // 
+            // btnBorrar
+            // 
+            this.btnBorrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBorrar.BackgroundImage = global::FantaApp.Properties.Resources.btnEliminar;
+            this.btnBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBorrar.InitialImage = null;
+            this.btnBorrar.Location = new System.Drawing.Point(244, 389);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(44, 40);
+            this.btnBorrar.TabIndex = 22;
+            this.btnBorrar.TabStop = false;
+            // 
             // frmFanta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.dgvBDFanta);
             this.Controls.Add(this.btnAñadir);
             this.Controls.Add(this.btnModificar);
@@ -185,6 +200,7 @@ namespace FantaApp
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBDFanta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBorrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,5 +213,6 @@ namespace FantaApp
         private System.Windows.Forms.PictureBox btnAñadir;
         private System.Windows.Forms.PictureBox btnModificar;
         private System.Windows.Forms.DataGridView dgvBDFanta;
+        private System.Windows.Forms.PictureBox btnBorrar;
     }
 }

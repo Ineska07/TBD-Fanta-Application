@@ -29,49 +29,26 @@ namespace FantaApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmComprador));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnAñadir = new System.Windows.Forms.PictureBox();
-            this.pbxLogotipo = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmComprador));
             this.dgvBDComprador = new System.Windows.Forms.DataGridView();
+            this.btnBorrar = new System.Windows.Forms.PictureBox();
+            this.pbxLogotipo = new System.Windows.Forms.PictureBox();
+            this.btnAñadir = new System.Windows.Forms.PictureBox();
             this.btnModificar = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.btnHelp = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAñadir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogotipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBDComprador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBorrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogotipo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAñadir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnModificar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnAñadir
-            // 
-            this.btnAñadir.BackColor = System.Drawing.Color.Transparent;
-            this.btnAñadir.BackgroundImage = global::FantaApp.Properties.Resources.btnAñadir;
-            this.btnAñadir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAñadir.InitialImage = null;
-            this.btnAñadir.Location = new System.Drawing.Point(125, 386);
-            this.btnAñadir.Name = "btnAñadir";
-            this.btnAñadir.Size = new System.Drawing.Size(96, 40);
-            this.btnAñadir.TabIndex = 13;
-            this.btnAñadir.TabStop = false;
-            this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
-            // 
-            // pbxLogotipo
-            // 
-            this.pbxLogotipo.BackColor = System.Drawing.Color.Transparent;
-            this.pbxLogotipo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbxLogotipo.BackgroundImage")));
-            this.pbxLogotipo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbxLogotipo.InitialImage = null;
-            this.pbxLogotipo.Location = new System.Drawing.Point(11, 17);
-            this.pbxLogotipo.Name = "pbxLogotipo";
-            this.pbxLogotipo.Size = new System.Drawing.Size(121, 69);
-            this.pbxLogotipo.TabIndex = 17;
-            this.pbxLogotipo.TabStop = false;
             // 
             // dgvBDComprador
             // 
@@ -123,6 +100,43 @@ namespace FantaApp
             this.dgvBDComprador.Size = new System.Drawing.Size(572, 277);
             this.dgvBDComprador.TabIndex = 18;
             // 
+            // btnBorrar
+            // 
+            this.btnBorrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBorrar.BackgroundImage = global::FantaApp.Properties.Resources.btnEliminar;
+            this.btnBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBorrar.InitialImage = null;
+            this.btnBorrar.Location = new System.Drawing.Point(231, 386);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(44, 40);
+            this.btnBorrar.TabIndex = 21;
+            this.btnBorrar.TabStop = false;
+            // 
+            // pbxLogotipo
+            // 
+            this.pbxLogotipo.BackColor = System.Drawing.Color.Transparent;
+            this.pbxLogotipo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbxLogotipo.BackgroundImage")));
+            this.pbxLogotipo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxLogotipo.InitialImage = null;
+            this.pbxLogotipo.Location = new System.Drawing.Point(11, 17);
+            this.pbxLogotipo.Name = "pbxLogotipo";
+            this.pbxLogotipo.Size = new System.Drawing.Size(121, 69);
+            this.pbxLogotipo.TabIndex = 17;
+            this.pbxLogotipo.TabStop = false;
+            // 
+            // btnAñadir
+            // 
+            this.btnAñadir.BackColor = System.Drawing.Color.Transparent;
+            this.btnAñadir.BackgroundImage = global::FantaApp.Properties.Resources.btnAñadir;
+            this.btnAñadir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAñadir.InitialImage = null;
+            this.btnAñadir.Location = new System.Drawing.Point(125, 386);
+            this.btnAñadir.Name = "btnAñadir";
+            this.btnAñadir.Size = new System.Drawing.Size(96, 40);
+            this.btnAñadir.TabIndex = 13;
+            this.btnAñadir.TabStop = false;
+            this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
+            // 
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.Transparent;
@@ -167,6 +181,7 @@ namespace FantaApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(600, 441);
+            this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.pbxLogotipo);
             this.Controls.Add(this.btnAñadir);
             this.Controls.Add(this.btnModificar);
@@ -176,9 +191,10 @@ namespace FantaApp
             this.Name = "frmComprador";
             this.Text = "frmComprador";
             this.Load += new System.EventHandler(this.frmComprador_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.btnAñadir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogotipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBDComprador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBorrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogotipo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAñadir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnModificar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).EndInit();
@@ -194,5 +210,6 @@ namespace FantaApp
         private System.Windows.Forms.PictureBox pbxLogotipo;
         private System.Windows.Forms.PictureBox btnSalir;
         private System.Windows.Forms.PictureBox btnHelp;
+        private System.Windows.Forms.PictureBox btnBorrar;
     }
 }
