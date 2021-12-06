@@ -54,7 +54,38 @@ namespace FantaApp
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            if (dgvBDComprador.SelectedRows == null)
+            {
+                MessageBox.Show("Selecciona una Fila");
+            }
+            else
+            {
+                int index = dgvBDComprador.CurrentCell.RowIndex;
 
+                frmCompradorMod CompradorMod = new frmCompradorMod(encontrarFila(index));
+                CompradorMod.Dgv = dgvBDComprador;
+                CompradorMod.Show();
+            }
+        }
+
+        private string[] encontrarFila(int index)
+        {
+            string encontrar = "Select * FROM CLIENTE WHERE Cliente_ID = " + ((int)index + 1);
+            SqlCommand Fila = new SqlCommand(encontrar, BD.conectar());
+            SqlDataAdapter r = new SqlDataAdapter();
+
+            r.SelectCommand = Fila;
+
+            DataTable datostabla = new DataTable();
+            string[] datos = new string[7];
+
+            r.Fill(datostabla);
+
+            for (int i = 0; i < datostabla.Columns.Count; i++)
+            {
+                datos[i] = datostabla.Rows[0][i].ToString();
+            }
+            return datos;
         }
     }
 }

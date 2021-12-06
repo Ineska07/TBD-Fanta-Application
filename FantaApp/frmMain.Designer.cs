@@ -121,6 +121,7 @@ namespace FantaApp
             this.btnEmpleados.Size = new System.Drawing.Size(145, 42);
             this.btnEmpleados.TabIndex = 12;
             this.btnEmpleados.TabStop = false;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
             // btnSalir
             // 

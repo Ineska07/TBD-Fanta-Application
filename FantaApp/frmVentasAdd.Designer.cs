@@ -35,14 +35,16 @@
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.lblErrorVacio = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.fANTA_BDDataSet = new FantaApp.FANTA_BDDataSet();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fANTA_BDDataSet = new FantaApp.FANTA_BDDataSet();
             this.productoTableAdapter = new FantaApp.FANTA_BDDataSetTableAdapters.ProductoTableAdapter();
+            this.fANTABDDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.btnAñadir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLimpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fANTA_BDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fANTA_BDDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fANTABDDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFantaAdd
@@ -109,25 +111,31 @@
             // listBox1
             // 
             this.listBox1.DataSource = this.productoBindingSource;
+            this.listBox1.DisplayMember = "Nombre_Producto";
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(15, 40);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(345, 264);
             this.listBox1.TabIndex = 37;
             // 
-            // fANTA_BDDataSet
-            // 
-            this.fANTA_BDDataSet.DataSetName = "FANTA_BDDataSet";
-            this.fANTA_BDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // productoBindingSource
             // 
             this.productoBindingSource.DataMember = "Producto";
             this.productoBindingSource.DataSource = this.fANTA_BDDataSet;
             // 
+            // fANTA_BDDataSet
+            // 
+            this.fANTA_BDDataSet.DataSetName = "FANTA_BDDataSet";
+            this.fANTA_BDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // productoTableAdapter
             // 
             this.productoTableAdapter.ClearBeforeFill = true;
+            // 
+            // fANTABDDataSetBindingSource
+            // 
+            this.fANTABDDataSetBindingSource.DataSource = this.fANTA_BDDataSet;
+            this.fANTABDDataSetBindingSource.Position = 0;
             // 
             // frmVentasAdd
             // 
@@ -147,8 +155,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnAñadir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLimpiar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fANTA_BDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fANTA_BDDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fANTABDDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +174,6 @@
         private FANTA_BDDataSet fANTA_BDDataSet;
         private System.Windows.Forms.BindingSource productoBindingSource;
         private FANTA_BDDataSetTableAdapters.ProductoTableAdapter productoTableAdapter;
+        private System.Windows.Forms.BindingSource fANTABDDataSetBindingSource;
     }
 }

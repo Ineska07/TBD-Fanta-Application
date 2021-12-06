@@ -70,6 +70,18 @@
     <Compile Include="frmComprador.Designer.cs">
       <DependentUpon>frmComprador.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCompradorMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCompradorMod.Designer.cs">
+      <DependentUpon>frmCompradorMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpleados.Designer.cs">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFanta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,9 +149,16 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmComprador.resx">
       <DependentUpon>frmComprador.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCompradorAdd.resx">
       <DependentUpon>frmCompradorAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCompradorMod.resx">
+      <DependentUpon>frmCompradorMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleados.resx">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFanta.resx">
       <DependentUpon>frmFanta.cs</DependentUpon>
@@ -170,6 +189,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmVentasAdd.resx">
       <DependentUpon>frmVentasAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -70,5 +70,11 @@ namespace FantaApp
             frmProveedores Proveedores = new frmProveedores();
             Proveedores.Show();
         }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            frmEmpleados Empleados = new frmEmpleados();
+            Empleados.Show();
+        }
     }
 }
