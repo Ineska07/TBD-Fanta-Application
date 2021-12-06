@@ -28,16 +28,24 @@ namespace FantaApp
          int nHeightEllipse // width of ellipse
      );
 
-        public frmCompradorMod()
+        string[] data;
+
+        public frmCompradorMod(string[] datatxt)
         {
+            data = datatxt;
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            rellenar(data);
         }
 
-        private void frmCompradorMod_Load(object sender, EventArgs e)
+        private void rellenar(string[] contenido)
         {
-
+            txtID.Text = contenido[0];
+            txtNombre.Text = contenido[1];
+            txtDireccion.Text = contenido[2];
+            txtTelefono.Text = contenido[3];
+            txtEmail.Text = contenido[4];
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -48,9 +56,8 @@ namespace FantaApp
             }
             else
             {
-                string cadenaCliente = "UPDATE CLIENTE SET Nombre_Cliente = '" + txtNombre.Text + "', Direccion = '" + txtDireccion.Text + "', Precio__Producto = " + txtPrecio.Text + ", " +
-                    "Tamaño_Envase = " + txtTamaño.Text + ", " + "Proveedor_ID = " + SacarIDProveedor() +
-                    ", Categoria_ID = " + SacarIDCategoria() + " WHERE Cliente_ID = " + txtID.Text;
+               string cadenaCliente = "UPDATE CLIENTE SET Nombre_Cliente = '" + txtNombre.Text + "', Direccion = '" + txtDireccion.Text + "', " +
+                    "Telefono = " + txtTelefono.Text + ", " + "Email = '" + txtEmail.Text + "' WHERE Cliente_ID = " + txtID.Text;
                 try
                 {
                     SqlCommand insertCliente = new SqlCommand(cadenaCliente, BD.conectar());
@@ -88,3 +95,4 @@ namespace FantaApp
         }
     }
 }
+

@@ -1,5 +1,4 @@
-﻿
-namespace FantaApp
+﻿namespace FantaApp
 {
     partial class frmCompradorMod
     {
@@ -221,7 +220,6 @@ namespace FantaApp
             this.Controls.Add(this.lblFantaAdd);
             this.Name = "frmCompradorMod";
             this.Text = "frmCompradorMod";
-            this.Load += new System.EventHandler(this.frmCompradorMod_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnModificar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLimpiar)).EndInit();

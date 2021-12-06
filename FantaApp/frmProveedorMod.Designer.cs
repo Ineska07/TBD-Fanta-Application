@@ -30,10 +30,7 @@
         {
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
-            this.btnModificar = new System.Windows.Forms.PictureBox();
-            this.btnSalir = new System.Windows.Forms.PictureBox();
             this.lblErrorVacio = new System.Windows.Forms.Label();
-            this.btnLimpiar = new System.Windows.Forms.PictureBox();
             this.lblFantaAdd = new System.Windows.Forms.Label();
             this.txtDetalles = new System.Windows.Forms.TextBox();
             this.lblProveedorDetalles = new System.Windows.Forms.Label();
@@ -45,6 +42,9 @@
             this.lblProveedorTelefono = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblProveedorNombre = new System.Windows.Forms.Label();
+            this.btnModificar = new System.Windows.Forms.PictureBox();
+            this.btnSalir = new System.Windows.Forms.PictureBox();
+            this.btnLimpiar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnModificar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLimpiar)).BeginInit();
@@ -57,7 +57,7 @@
             this.txtID.Location = new System.Drawing.Point(38, 53);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(99, 20);
+            this.txtID.Size = new System.Drawing.Size(78, 20);
             this.txtID.TabIndex = 62;
             // 
             // lblID
@@ -69,6 +69,113 @@
             this.lblID.Size = new System.Drawing.Size(18, 13);
             this.lblID.TabIndex = 63;
             this.lblID.Text = "ID";
+            // 
+            // lblErrorVacio
+            // 
+            this.lblErrorVacio.AutoSize = true;
+            this.lblErrorVacio.ForeColor = System.Drawing.Color.Yellow;
+            this.lblErrorVacio.Location = new System.Drawing.Point(137, 82);
+            this.lblErrorVacio.Name = "lblErrorVacio";
+            this.lblErrorVacio.Size = new System.Drawing.Size(164, 13);
+            this.lblErrorVacio.TabIndex = 59;
+            this.lblErrorVacio.Text = "Uno o mas campos estan vacios!";
+            this.lblErrorVacio.Visible = false;
+            // 
+            // lblFantaAdd
+            // 
+            this.lblFantaAdd.AutoSize = true;
+            this.lblFantaAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFantaAdd.ForeColor = System.Drawing.Color.White;
+            this.lblFantaAdd.Location = new System.Drawing.Point(14, 16);
+            this.lblFantaAdd.Name = "lblFantaAdd";
+            this.lblFantaAdd.Size = new System.Drawing.Size(102, 16);
+            this.lblFantaAdd.TabIndex = 55;
+            this.lblFantaAdd.Text = "Modificar Fila";
+            // 
+            // txtDetalles
+            // 
+            this.txtDetalles.Location = new System.Drawing.Point(58, 223);
+            this.txtDetalles.Name = "txtDetalles";
+            this.txtDetalles.Size = new System.Drawing.Size(243, 20);
+            this.txtDetalles.TabIndex = 68;
+            // 
+            // lblProveedorDetalles
+            // 
+            this.lblProveedorDetalles.AutoSize = true;
+            this.lblProveedorDetalles.ForeColor = System.Drawing.Color.White;
+            this.lblProveedorDetalles.Location = new System.Drawing.Point(7, 230);
+            this.lblProveedorDetalles.Name = "lblProveedorDetalles";
+            this.lblProveedorDetalles.Size = new System.Drawing.Size(45, 13);
+            this.lblProveedorDetalles.TabIndex = 73;
+            this.lblProveedorDetalles.Text = "Detalles";
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(80, 128);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(221, 20);
+            this.txtDireccion.TabIndex = 65;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(45, 176);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(96, 20);
+            this.txtEmail.TabIndex = 67;
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(222, 176);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(79, 20);
+            this.txtTelefono.TabIndex = 66;
+            // 
+            // lblProveedorDireccion
+            // 
+            this.lblProveedorDireccion.AutoSize = true;
+            this.lblProveedorDireccion.ForeColor = System.Drawing.Color.White;
+            this.lblProveedorDireccion.Location = new System.Drawing.Point(5, 132);
+            this.lblProveedorDireccion.Name = "lblProveedorDireccion";
+            this.lblProveedorDireccion.Size = new System.Drawing.Size(52, 13);
+            this.lblProveedorDireccion.TabIndex = 72;
+            this.lblProveedorDireccion.Text = "Direccion";
+            // 
+            // lblProveedorEmail
+            // 
+            this.lblProveedorEmail.AutoSize = true;
+            this.lblProveedorEmail.ForeColor = System.Drawing.Color.White;
+            this.lblProveedorEmail.Location = new System.Drawing.Point(7, 179);
+            this.lblProveedorEmail.Name = "lblProveedorEmail";
+            this.lblProveedorEmail.Size = new System.Drawing.Size(32, 13);
+            this.lblProveedorEmail.TabIndex = 71;
+            this.lblProveedorEmail.Text = "Email";
+            // 
+            // lblProveedorTelefono
+            // 
+            this.lblProveedorTelefono.AutoSize = true;
+            this.lblProveedorTelefono.ForeColor = System.Drawing.Color.White;
+            this.lblProveedorTelefono.Location = new System.Drawing.Point(167, 179);
+            this.lblProveedorTelefono.Name = "lblProveedorTelefono";
+            this.lblProveedorTelefono.Size = new System.Drawing.Size(49, 13);
+            this.lblProveedorTelefono.TabIndex = 70;
+            this.lblProveedorTelefono.Text = "Telefono";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(80, 102);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(221, 20);
+            this.txtNombre.TabIndex = 64;
+            // 
+            // lblProveedorNombre
+            // 
+            this.lblProveedorNombre.AutoSize = true;
+            this.lblProveedorNombre.ForeColor = System.Drawing.Color.White;
+            this.lblProveedorNombre.Location = new System.Drawing.Point(6, 105);
+            this.lblProveedorNombre.Name = "lblProveedorNombre";
+            this.lblProveedorNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblProveedorNombre.TabIndex = 69;
+            this.lblProveedorNombre.Text = "Nombre";
             // 
             // btnModificar
             // 
@@ -89,23 +196,12 @@
             this.btnSalir.BackgroundImage = global::FantaApp.Properties.Resources.btnExit;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSalir.InitialImage = null;
-            this.btnSalir.Location = new System.Drawing.Point(222, 279);
+            this.btnSalir.Location = new System.Drawing.Point(237, 279);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(77, 29);
+            this.btnSalir.Size = new System.Drawing.Size(64, 29);
             this.btnSalir.TabIndex = 60;
             this.btnSalir.TabStop = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // lblErrorVacio
-            // 
-            this.lblErrorVacio.AutoSize = true;
-            this.lblErrorVacio.ForeColor = System.Drawing.Color.Yellow;
-            this.lblErrorVacio.Location = new System.Drawing.Point(137, 86);
-            this.lblErrorVacio.Name = "lblErrorVacio";
-            this.lblErrorVacio.Size = new System.Drawing.Size(164, 13);
-            this.lblErrorVacio.TabIndex = 59;
-            this.lblErrorVacio.Text = "Uno o mas campos estan vacios!";
-            this.lblErrorVacio.Visible = false;
             // 
             // btnLimpiar
             // 
@@ -120,108 +216,12 @@
             this.btnLimpiar.TabStop = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // lblFantaAdd
-            // 
-            this.lblFantaAdd.AutoSize = true;
-            this.lblFantaAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFantaAdd.ForeColor = System.Drawing.Color.White;
-            this.lblFantaAdd.Location = new System.Drawing.Point(14, 16);
-            this.lblFantaAdd.Name = "lblFantaAdd";
-            this.lblFantaAdd.Size = new System.Drawing.Size(102, 16);
-            this.lblFantaAdd.TabIndex = 55;
-            this.lblFantaAdd.Text = "Modificar Fila";
-            // 
-            // txtDetalles
-            // 
-            this.txtDetalles.Location = new System.Drawing.Point(57, 206);
-            this.txtDetalles.Name = "txtDetalles";
-            this.txtDetalles.Size = new System.Drawing.Size(243, 20);
-            this.txtDetalles.TabIndex = 68;
-            // 
-            // lblProveedorDetalles
-            // 
-            this.lblProveedorDetalles.AutoSize = true;
-            this.lblProveedorDetalles.ForeColor = System.Drawing.Color.White;
-            this.lblProveedorDetalles.Location = new System.Drawing.Point(5, 209);
-            this.lblProveedorDetalles.Name = "lblProveedorDetalles";
-            this.lblProveedorDetalles.Size = new System.Drawing.Size(45, 13);
-            this.lblProveedorDetalles.TabIndex = 73;
-            this.lblProveedorDetalles.Text = "Detalles";
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Location = new System.Drawing.Point(57, 128);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(243, 20);
-            this.txtDireccion.TabIndex = 65;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(58, 180);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(243, 20);
-            this.txtEmail.TabIndex = 67;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Location = new System.Drawing.Point(57, 154);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(243, 20);
-            this.txtTelefono.TabIndex = 66;
-            // 
-            // lblProveedorDireccion
-            // 
-            this.lblProveedorDireccion.AutoSize = true;
-            this.lblProveedorDireccion.ForeColor = System.Drawing.Color.White;
-            this.lblProveedorDireccion.Location = new System.Drawing.Point(5, 132);
-            this.lblProveedorDireccion.Name = "lblProveedorDireccion";
-            this.lblProveedorDireccion.Size = new System.Drawing.Size(52, 13);
-            this.lblProveedorDireccion.TabIndex = 72;
-            this.lblProveedorDireccion.Text = "Direccion";
-            // 
-            // lblProveedorEmail
-            // 
-            this.lblProveedorEmail.AutoSize = true;
-            this.lblProveedorEmail.ForeColor = System.Drawing.Color.White;
-            this.lblProveedorEmail.Location = new System.Drawing.Point(7, 183);
-            this.lblProveedorEmail.Name = "lblProveedorEmail";
-            this.lblProveedorEmail.Size = new System.Drawing.Size(32, 13);
-            this.lblProveedorEmail.TabIndex = 71;
-            this.lblProveedorEmail.Text = "Email";
-            // 
-            // lblProveedorTelefono
-            // 
-            this.lblProveedorTelefono.AutoSize = true;
-            this.lblProveedorTelefono.ForeColor = System.Drawing.Color.White;
-            this.lblProveedorTelefono.Location = new System.Drawing.Point(5, 157);
-            this.lblProveedorTelefono.Name = "lblProveedorTelefono";
-            this.lblProveedorTelefono.Size = new System.Drawing.Size(49, 13);
-            this.lblProveedorTelefono.TabIndex = 70;
-            this.lblProveedorTelefono.Text = "Telefono";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(58, 102);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(243, 20);
-            this.txtNombre.TabIndex = 64;
-            // 
-            // lblProveedorNombre
-            // 
-            this.lblProveedorNombre.AutoSize = true;
-            this.lblProveedorNombre.ForeColor = System.Drawing.Color.White;
-            this.lblProveedorNombre.Location = new System.Drawing.Point(6, 105);
-            this.lblProveedorNombre.Name = "lblProveedorNombre";
-            this.lblProveedorNombre.Size = new System.Drawing.Size(44, 13);
-            this.lblProveedorNombre.TabIndex = 69;
-            this.lblProveedorNombre.Text = "Nombre";
-            // 
             // frmProveedorMod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(313, 325);
+            this.ClientSize = new System.Drawing.Size(313, 323);
             this.Controls.Add(this.txtDetalles);
             this.Controls.Add(this.lblProveedorDetalles);
             this.Controls.Add(this.txtDireccion);

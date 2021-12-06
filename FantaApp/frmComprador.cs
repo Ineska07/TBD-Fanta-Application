@@ -62,7 +62,7 @@ namespace FantaApp
             {
                 int index = dgvBDComprador.CurrentCell.RowIndex;
 
-                frmFantaMod CompradorMod = new frmFantaMod(encontrarFila(index));
+                frmCompradorMod CompradorMod = new frmCompradorMod(encontrarFila(index));
                 CompradorMod.Dgv = dgvBDComprador;
                 CompradorMod.Show();
             }
@@ -70,7 +70,7 @@ namespace FantaApp
 
         private string[] encontrarFila(int index)
         {
-            string encontrar = "Select * FROM Producto WHERE Cliente_ID = " + ((int)index + 1);
+            string encontrar = "Select * FROM CLIENTE WHERE Cliente_ID = " + ((int)index + 1);
             SqlCommand Fila = new SqlCommand(encontrar, BD.conectar());
             SqlDataAdapter r = new SqlDataAdapter();
 
