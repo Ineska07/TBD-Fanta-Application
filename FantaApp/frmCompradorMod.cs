@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace FantaApp
 {
-    public partial class frmCompradorAdd: Form
+    public partial class frmCompradorMod : Form
     {
         public DataGridView Dgv { get; set; }
 
@@ -28,24 +28,29 @@ namespace FantaApp
          int nHeightEllipse // width of ellipse
      );
 
-        public frmCompradorAdd()
+        public frmCompradorMod()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void frmCompradorMod_Load(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
             if (txtNombre.Text == "" || txtEmail.Text == "" || txtDireccion.Text == "" || txtTelefono.Text == "")
             {
                 lblErrorVacio.Visible = true;
             }
             else
             {
-                string cadenaCliente = "INSERT INTO Cliente (Cliente_ID, Nombre_Cliente, Direccion, Telefono, Email, Empledos_ID) VALUES" +
-                " (" + (Dgv.Rows.Count + 1).ToString() + ", '" + txtNombre.Text + "', '" + txtDireccion.Text + "', " + txtTelefono.Text + ", '" + txtEmail.Text + "', " + "1)";
+                string cadenaCliente = "UPDATE CLIENTE SET Nombre_Cliente = '" + txtNombre.Text + "', Direccion = '" + txtDireccion.Text + "', Precio__Producto = " + txtPrecio.Text + ", " +
+                    "Tamaño_Envase = " + txtTamaño.Text + ", " + "Proveedor_ID = " + SacarIDProveedor() +
+                    ", Categoria_ID = " + SacarIDCategoria() + " WHERE Cliente_ID = " + txtID.Text;
                 try
                 {
                     SqlCommand insertCliente = new SqlCommand(cadenaCliente, BD.conectar());
@@ -55,13 +60,18 @@ namespace FantaApp
                     string consulta = "SELECT NOMBRE_CLIENTE AS 'NOMBRE', DIRECCION, TELEFONO, EMAIL FROM CLIENTE";
                     bd.VerificarConexion(Dgv, consulta);
                     this.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Se ha producido un error. Datos no validados.");
-                        limpiar(); 
-                    }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERROR, OCURRIO ALGO DURANTE EL UPDATE");
+                    limpiar();
+                }
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            limpiar();
         }
 
         private void limpiar()
@@ -70,16 +80,6 @@ namespace FantaApp
             txtDireccion.Text = "";
             txtTelefono.Text = "";
             txtEmail.Text = "";
-        }
-
-        private void frmCompradorAdd_Load(object sender, EventArgs e)
-        {
-            BD bd = new BD();
-        }
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            limpiar();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
