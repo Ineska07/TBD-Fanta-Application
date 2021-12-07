@@ -26,6 +26,7 @@ namespace FantaApp
           int nHeightEllipse // width of ellipse
       );
         string consulta;
+        string consultaBorrar;
 
         public frmComprador()
         {
@@ -86,6 +87,41 @@ namespace FantaApp
                 datos[i] = datostabla.Rows[0][i].ToString();
             }
             return datos;
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("¿Seguro que quiere borrar esta fila?", "Confirmación de borrado", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                int index = dgvBDComprador.CurrentCell.RowIndex;
+                consultaBorrar = "DELETE FROM Cliente Where Cliente_ID="+ index;
+
+                if (dgvBDComprador.SelectedRows == null)
+                {
+                    MessageBox.Show("Selecciona una Fila");
+                }
+                else
+                {
+                    /*try
+                    {*/
+                        SqlCommand insertCliente = new SqlCommand(consultaBorrar, BD.conectar());
+                        insertCliente.ExecuteNonQuery();
+                        BD.conectar().Close();
+                        BD bd = new BD();
+                        bd.VerificarConexion(dgvBDComprador, consultaBorrar);
+                        this.Close();
+                    /*}
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Se ha producido un error. Datos no validados.");
+                    }*/
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
         }
     }
 }
