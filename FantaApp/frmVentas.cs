@@ -49,6 +49,7 @@ namespace FantaApp
         {
             //Algo como el de Fanta pero sin ser las celdas diréctamente xd
             frmVentasAdd VentasAdd = new frmVentasAdd();
+            VentasAdd.Dgv = dgvBDVentas;
             VentasAdd.Show();
         }
 

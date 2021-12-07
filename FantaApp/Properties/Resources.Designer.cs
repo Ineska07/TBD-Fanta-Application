@@ -163,6 +163,16 @@ namespace FantaApp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnMinus {
+            get {
+                object obj = ResourceManager.GetObject("btnMinus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnModificar {
             get {
                 object obj = ResourceManager.GetObject("btnModificar", resourceCulture);
@@ -186,6 +196,16 @@ namespace FantaApp.Properties {
         internal static System.Drawing.Bitmap btnPagos {
             get {
                 object obj = ResourceManager.GetObject("btnPagos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnPlus {
+            get {
+                object obj = ResourceManager.GetObject("btnPlus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

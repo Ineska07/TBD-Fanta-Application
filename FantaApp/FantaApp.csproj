@@ -320,5 +320,11 @@
   <ItemGroup>
     <None Include="Resources\btnEliminar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\btnMinus.png" />
+    <None Include="Resources\btnPlus1.png" />
+    <None Include="Resources\btnMinus1.png" />
+    <Content Include="Resources\btnPlus.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
