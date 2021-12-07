@@ -28,7 +28,7 @@ namespace FantaApp
         );
 
         string consulta;
-
+        string consultaBorrar;
 
         public frmEmpleados()
         {
@@ -93,6 +93,40 @@ namespace FantaApp
             frmEmpleadosAdd EmpleadosAdd = new frmEmpleadosAdd();
             EmpleadosAdd.Dgv = dgvBDEmpleados;
             EmpleadosAdd.Show();
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("¿Seguro que quiere borrar esta fila?", "Confirmación de borrado", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                int index = dgvBDEmpleados.CurrentCell.RowIndex;
+                consultaBorrar = "DELETE FROM Empleados Where Nombre_Empleado=" + "'" + dgvBDEmpleados.Rows[dgvBDEmpleados.CurrentCell.RowIndex].Cells[0].Value.ToString() + "'";
+
+                if (dgvBDEmpleados.SelectedRows == null)
+                {
+                    MessageBox.Show("Selecciona una Fila");
+                }
+                else
+                {
+                    try
+                    {
+                        SqlCommand BorrarCliente = new SqlCommand(consultaBorrar, BD.conectar());
+                        BorrarCliente.ExecuteNonQuery();
+                        BD.conectar().Close();
+                        BD bd = new BD();
+                        bd.VerificarConexion(dgvBDEmpleados, consulta);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Se ha producido un error. Datos no validados.");
+                    }
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
         }
     }
 }
