@@ -91,6 +91,7 @@ namespace FantaApp
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
+        //Como se el método anterior el index, la función solo funcionaría la primera vez. Por las mismas razones del inicio.
             DialogResult dialogResult = MessageBox.Show("¿Seguro que quiere borrar esta fila?", "Confirmación de borrado", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
