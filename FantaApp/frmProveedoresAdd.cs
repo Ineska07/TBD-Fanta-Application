@@ -51,8 +51,12 @@ namespace FantaApp
             }
             else
             {
+                string EncontrarID = "SELECT MAX(Proveedor_ID) FROM Proveedor";
+                SqlCommand buscarID = new SqlCommand(EncontrarID, BD.conectar());
+                Int32 idActual = (Int32)buscarID.ExecuteScalar();
+
                 string cadenaFanta = "INSERT INTO Proveedor (Proveedor_ID, Nombre_Proveedor, Direccion_Proveedor, Telefono_Proveedor, Email_Proveedor, Detalles_Proveedor) VALUES" +
-                " (" + (Dgv.Rows.Count + 1).ToString() + ", '" + txtNombre.Text + "', '" + txtDireccion.Text + "', " + txtTelefono.Text + ", '" + txtEmail.Text + "', '" + txtDetalles.Text + "')";
+                " (" + (idActual + 1).ToString() + ", '" + txtNombre.Text + "', '" + txtDireccion.Text + "', " + txtTelefono.Text + ", '" + txtEmail.Text + "', '" + txtDetalles.Text + "')";
                 try
                 {
                     SqlCommand insertFanta = new SqlCommand(cadenaFanta, BD.conectar());

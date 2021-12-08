@@ -56,8 +56,12 @@ namespace FantaApp
             }
             else
             {
+                string EncontrarID = "SELECT MAX(Empleados_ID) FROM Empleados";
+                SqlCommand buscarID = new SqlCommand(EncontrarID, BD.conectar());
+                Int32 idActual = (Int32)buscarID.ExecuteScalar();
+
                 string cadenaFanta = "INSERT INTO Empleados (Empleados_ID, Nombre_Empleado, Apellido_Empleado, Direccion_Empleado, Telefono_Empleado, Email_Empleado, Nombre_de_Usuario, Contraseña, Rol_ID) VALUES" +
-                " (" + (Dgv.Rows.Count + 1).ToString() + ", '" + txtNombre.Text + "', '" +  txtApellido.Text + 
+                " (" + (idActual + 1).ToString() + ", '" + txtNombre.Text + "', '" +  txtApellido.Text + 
                 "', '" + txtDireccion.Text + "', " + txtTelefono.Text + ", '" + txtEmail.Text + "', '" + txtUsuario.Text + "', '" + 
                 txtContraseña.Text + "', " +  txtIDRol.Text + ")";
                 try

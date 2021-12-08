@@ -91,12 +91,11 @@ namespace FantaApp
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-        //Como se el método anterior el index, la función solo funcionaría la primera vez. Por las mismas razones del inicio.
             DialogResult dialogResult = MessageBox.Show("¿Seguro que quiere borrar esta fila?", "Confirmación de borrado", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 int index = dgvBDComprador.CurrentCell.RowIndex;
-                consultaBorrar = "DELETE FROM Cliente Where Cliente_ID="+ index;
+                consultaBorrar = "DELETE FROM Cliente Where Nombre_Cliente="+ "'"+ dgvBDComprador.Rows[dgvBDComprador.CurrentCell.RowIndex].Cells[0].Value.ToString()+"'";
 
                 if (dgvBDComprador.SelectedRows == null)
                 {
@@ -104,19 +103,19 @@ namespace FantaApp
                 }
                 else
                 {
-                    /*try
-                    {*/
-                        SqlCommand insertCliente = new SqlCommand(consultaBorrar, BD.conectar());
-                        insertCliente.ExecuteNonQuery();
+                    try
+                    {
+                        SqlCommand BorrarCliente = new SqlCommand(consultaBorrar, BD.conectar());
+                        BorrarCliente.ExecuteNonQuery();
                         BD.conectar().Close();
                         BD bd = new BD();
-                        bd.VerificarConexion(dgvBDComprador, consultaBorrar);
-                        this.Close();
-                    /*}
+                        consulta = "SELECT NOMBRE_CLIENTE AS 'NOMBRE', DIRECCION, TELEFONO, EMAIL FROM CLIENTE";
+                        bd.VerificarConexion(dgvBDComprador, consulta);
+                    }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Se ha producido un error. Datos no validados.");
-                    }*/
+                    }
                 }
             }
             else if (dialogResult == DialogResult.No)

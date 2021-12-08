@@ -27,6 +27,7 @@ namespace FantaApp
       );
 
         string consulta;
+        string consultaBorrar;
 
         public frmFanta()
         {
@@ -88,6 +89,40 @@ namespace FantaApp
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("¿Seguro que quiere borrar esta fila?", "Confirmación de borrado", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                int index = dgvBDFanta.CurrentCell.RowIndex;
+                consultaBorrar = "DELETE FROM Producto Where Nombre_Producto=" + "'" + dgvBDFanta.Rows[dgvBDFanta.CurrentCell.RowIndex].Cells[0].Value.ToString() + "'";
+
+                if (dgvBDFanta.SelectedRows == null)
+                {
+                    MessageBox.Show("Selecciona una Fila");
+                }
+                else
+                {
+                    try
+                    {
+                        SqlCommand BorrarCliente = new SqlCommand(consultaBorrar, BD.conectar());
+                        BorrarCliente.ExecuteNonQuery();
+                        BD.conectar().Close();
+                        BD bd = new BD();
+                        bd.VerificarConexion(dgvBDFanta, consulta);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Se ha producido un error. Datos no validados.");
+                    }
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
         }
     }
 }
