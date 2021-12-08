@@ -154,6 +154,12 @@
     <Compile Include="frmVentasAdd.Designer.cs">
       <DependentUpon>frmVentasAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVentasMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentasMod.Designer.cs">
+      <DependentUpon>frmVentasMod.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAdmins.resx">
@@ -208,6 +214,9 @@
     <EmbeddedResource Include="frmVentasAdd.resx">
       <DependentUpon>frmVentasAdd.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentasMod.resx">
+      <DependentUpon>frmVentasMod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -138,6 +138,7 @@ namespace FantaApp
             this.cbxClientes.Name = "cbxClientes";
             this.cbxClientes.Size = new System.Drawing.Size(121, 21);
             this.cbxClientes.TabIndex = 39;
+            this.cbxClientes.SelectedIndexChanged += new System.EventHandler(this.cbxClientes_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -210,6 +211,7 @@ namespace FantaApp
             this.dgvBDProductos.ShowEditingIcon = false;
             this.dgvBDProductos.Size = new System.Drawing.Size(383, 172);
             this.dgvBDProductos.TabIndex = 42;
+            this.dgvBDProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBDProductos_CellClick);
             // 
             // numCantidad
             // 
@@ -378,6 +380,7 @@ namespace FantaApp
             this.cbxTdPago.Name = "cbxTdPago";
             this.cbxTdPago.Size = new System.Drawing.Size(121, 21);
             this.cbxTdPago.TabIndex = 48;
+            this.cbxTdPago.SelectedIndexChanged += new System.EventHandler(this.cbxTdPago_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -399,6 +402,7 @@ namespace FantaApp
             this.pbxPlus.Size = new System.Drawing.Size(24, 24);
             this.pbxPlus.TabIndex = 45;
             this.pbxPlus.TabStop = false;
+            this.pbxPlus.Click += new System.EventHandler(this.pbxPlus_Click);
             // 
             // pbxMinus
             // 
@@ -410,6 +414,7 @@ namespace FantaApp
             this.pbxMinus.Size = new System.Drawing.Size(24, 24);
             this.pbxMinus.TabIndex = 44;
             this.pbxMinus.TabStop = false;
+            this.pbxMinus.Click += new System.EventHandler(this.pbxMinus_Click);
             // 
             // btnSalir
             // 
@@ -450,6 +455,7 @@ namespace FantaApp
             this.btnAñadir.TabIndex = 27;
             this.btnAñadir.TabStop = false;
             this.btnAñadir.LoadCompleted += new System.ComponentModel.AsyncCompletedEventHandler(this.btnAñadir_LoadCompleted);
+            this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
             // 
             // frmVentasAdd
             // 

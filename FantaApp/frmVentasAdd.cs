@@ -317,17 +317,33 @@ namespace FantaApp
                     SqlCommand insertDetallesdeOrden = new SqlCommand(insertDdO, BD.conectar());
                     insertDetallesdeOrden.ExecuteNonQuery();
                     BD.conectar().Close();
+
+                    string cadenaInventario = "UPDATE Producto SET Existencia__Producto = " + dgvBDProductos.Rows[getProductosIndexFromValue(dgvOrdenNueva.Rows[i].Cells[1].Value.ToString())].Cells[3].Value.ToString() + " WHERE Nombre_Producto = '" + dgvOrdenNueva.Rows[i].Cells[1].Value.ToString() + "'";
+                   SqlCommand updateInventario = new SqlCommand(cadenaInventario, BD.conectar());
+                    updateInventario.ExecuteNonQuery();
+                    BD.conectar().Close();
                 }
                 // Modificar esto de abajo para al momento que se cierra la ventana se muestre la tabla actualizada
 
                 BD bd = new BD();
-                string consulta = "SELECT Detalles_de_Orden.Cantidad, Detalles_de_Orden.Tipo_Pago, Detalles_de_Orden.Descuento, Detalles_de_Orden.Total FROM Detalles_de_Orden";
+                string consulta = "SELECT Orden.Orden_ID AS 'No. Orden', Nombre_Cliente AS 'Cliente', Fecha_Orden AS 'Fecha' FROM Cliente, Orden WHERE Orden.Cliente_ID = Cliente.Cliente_ID";
                 bd.VerificarConexion(Dgv, consulta);
 
                 this.Close();
             }
         }
 
+        private int getProductosIndexFromValue(string nombre)
+        {
+            for (int i = 0; i < dgvBDProductos.Rows.Count; i++)
+            {
+                if (dgvBDProductos.Rows[i].Cells[0].Value.ToString() == nombre)
+                {
+                    return i;
+                }
+            }
+            return 0;
+        }
         private void activarAdd()
         {
             if (dgvOrdenNueva.Rows.Count == 0)
@@ -393,6 +409,11 @@ namespace FantaApp
             DataTable datostabla = new DataTable();
             r.Fill(datostabla);
             return datostabla.Rows[0][0].ToString();
+        }
+
+        private void dgvBDProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
