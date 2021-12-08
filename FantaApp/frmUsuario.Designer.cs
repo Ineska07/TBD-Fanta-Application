@@ -32,10 +32,10 @@
             this.txtUsername = new System.Windows.Forms.MaskedTextBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
+            this.lblErrorVacio = new System.Windows.Forms.Label();
             this.pbxLogin = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.PictureBox();
-            this.lblErrorVacio = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
@@ -43,7 +43,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(12, 252);
+            this.txtPassword.Location = new System.Drawing.Point(12, 234);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(194, 20);
@@ -70,19 +70,30 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.ForeColor = System.Drawing.Color.White;
-            this.lblPassword.Location = new System.Drawing.Point(12, 236);
+            this.lblPassword.Location = new System.Drawing.Point(12, 218);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(53, 13);
             this.lblPassword.TabIndex = 4;
             this.lblPassword.Text = "Password";
             // 
+            // lblErrorVacio
+            // 
+            this.lblErrorVacio.AutoSize = true;
+            this.lblErrorVacio.ForeColor = System.Drawing.Color.Yellow;
+            this.lblErrorVacio.Location = new System.Drawing.Point(39, 307);
+            this.lblErrorVacio.Name = "lblErrorVacio";
+            this.lblErrorVacio.Size = new System.Drawing.Size(134, 13);
+            this.lblErrorVacio.TabIndex = 54;
+            this.lblErrorVacio.Text = "Algun dato esta incorrecto!";
+            this.lblErrorVacio.Visible = false;
+            // 
             // pbxLogin
             // 
-            this.pbxLogin.BackgroundImage = global::FantaApp.Properties.Resources.login;
+            this.pbxLogin.BackgroundImage = global::FantaApp.Properties.Resources.btnIniciarSesion;
             this.pbxLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbxLogin.Location = new System.Drawing.Point(69, 278);
+            this.pbxLogin.Location = new System.Drawing.Point(55, 271);
             this.pbxLogin.Name = "pbxLogin";
-            this.pbxLogin.Size = new System.Drawing.Size(82, 27);
+            this.pbxLogin.Size = new System.Drawing.Size(103, 27);
             this.pbxLogin.TabIndex = 10;
             this.pbxLogin.TabStop = false;
             this.pbxLogin.Tag = "";
@@ -92,9 +103,9 @@
             // 
             this.pictureBox1.BackgroundImage = global::FantaApp.Properties.Resources.Logotipo;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(44, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(33, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 98);
+            this.pictureBox1.Size = new System.Drawing.Size(156, 110);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
@@ -104,23 +115,12 @@
             this.btnSalir.BackgroundImage = global::FantaApp.Properties.Resources.btnExit;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSalir.InitialImage = null;
-            this.btnSalir.Location = new System.Drawing.Point(129, 336);
+            this.btnSalir.Location = new System.Drawing.Point(157, 342);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(77, 30);
+            this.btnSalir.Size = new System.Drawing.Size(49, 24);
             this.btnSalir.TabIndex = 8;
             this.btnSalir.TabStop = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // lblErrorVacio
-            // 
-            this.lblErrorVacio.AutoSize = true;
-            this.lblErrorVacio.ForeColor = System.Drawing.Color.Yellow;
-            this.lblErrorVacio.Location = new System.Drawing.Point(45, 315);
-            this.lblErrorVacio.Name = "lblErrorVacio";
-            this.lblErrorVacio.Size = new System.Drawing.Size(134, 13);
-            this.lblErrorVacio.TabIndex = 54;
-            this.lblErrorVacio.Text = "Algun dato esta incorrecto!";
-            this.lblErrorVacio.Visible = false;
             // 
             // frmUsuario
             // 

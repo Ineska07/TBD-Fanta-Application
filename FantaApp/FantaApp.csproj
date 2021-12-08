@@ -330,6 +330,7 @@
     <None Include="Resources\btnEliminar.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\btnIniciarSesion.png" />
     <Content Include="Resources\btnMinus.png" />
     <None Include="Resources\login.png" />
     <None Include="Resources\btnPlus1.png" />
