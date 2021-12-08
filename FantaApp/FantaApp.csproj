@@ -331,6 +331,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\btnMinus.png" />
+    <None Include="Resources\login.png" />
     <None Include="Resources\btnPlus1.png" />
     <None Include="Resources\btnMinus1.png" />
     <Content Include="Resources\btnPlus.png" />

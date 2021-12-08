@@ -28,46 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.lblUI = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.MaskedTextBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
+            this.pbxLogin = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.PictureBox();
-            this.btnHelp = new System.Windows.Forms.PictureBox();
+            this.lblErrorVacio = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtPassword
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 232);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(114, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtPassword.Location = new System.Drawing.Point(12, 252);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(194, 20);
+            this.txtPassword.TabIndex = 0;
             // 
-            // maskedTextBox1
+            // txtUsername
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(15, 156);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(114, 20);
-            this.maskedTextBox1.TabIndex = 1;
-            // 
-            // lblUI
-            // 
-            this.lblUI.AutoSize = true;
-            this.lblUI.ForeColor = System.Drawing.Color.White;
-            this.lblUI.Location = new System.Drawing.Point(12, 23);
-            this.lblUI.Name = "lblUI";
-            this.lblUI.Size = new System.Drawing.Size(189, 13);
-            this.lblUI.TabIndex = 2;
-            this.lblUI.Text = "Bienvenido, esta es una muy bonita UI";
+            this.txtUsername.Location = new System.Drawing.Point(12, 176);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(194, 20);
+            this.txtUsername.TabIndex = 1;
             // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(12, 140);
+            this.lblUser.Location = new System.Drawing.Point(12, 160);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(55, 13);
             this.lblUser.TabIndex = 3;
@@ -77,11 +70,33 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.ForeColor = System.Drawing.Color.White;
-            this.lblPassword.Location = new System.Drawing.Point(12, 216);
+            this.lblPassword.Location = new System.Drawing.Point(12, 236);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(53, 13);
             this.lblPassword.TabIndex = 4;
             this.lblPassword.Text = "Password";
+            // 
+            // pbxLogin
+            // 
+            this.pbxLogin.BackgroundImage = global::FantaApp.Properties.Resources.login;
+            this.pbxLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxLogin.Location = new System.Drawing.Point(69, 278);
+            this.pbxLogin.Name = "pbxLogin";
+            this.pbxLogin.Size = new System.Drawing.Size(82, 27);
+            this.pbxLogin.TabIndex = 10;
+            this.pbxLogin.TabStop = false;
+            this.pbxLogin.Tag = "";
+            this.pbxLogin.Click += new System.EventHandler(this.pbxLogin_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::FantaApp.Properties.Resources.Logotipo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(44, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(127, 98);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // btnSalir
             // 
@@ -96,18 +111,16 @@
             this.btnSalir.TabStop = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnHelp
+            // lblErrorVacio
             // 
-            this.btnHelp.BackColor = System.Drawing.Color.Transparent;
-            this.btnHelp.BackgroundImage = global::FantaApp.Properties.Resources.btnHelp;
-            this.btnHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnHelp.InitialImage = null;
-            this.btnHelp.Location = new System.Drawing.Point(94, 336);
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(29, 30);
-            this.btnHelp.TabIndex = 7;
-            this.btnHelp.TabStop = false;
-            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            this.lblErrorVacio.AutoSize = true;
+            this.lblErrorVacio.ForeColor = System.Drawing.Color.Yellow;
+            this.lblErrorVacio.Location = new System.Drawing.Point(45, 315);
+            this.lblErrorVacio.Name = "lblErrorVacio";
+            this.lblErrorVacio.Size = new System.Drawing.Size(134, 13);
+            this.lblErrorVacio.TabIndex = 54;
+            this.lblErrorVacio.Text = "Algun dato esta incorrecto!";
+            this.lblErrorVacio.Visible = false;
             // 
             // frmUsuario
             // 
@@ -115,18 +128,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(218, 378);
+            this.Controls.Add(this.lblErrorVacio);
+            this.Controls.Add(this.pbxLogin);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUser);
-            this.Controls.Add(this.lblUI);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.txtPassword);
             this.Name = "frmUsuario";
             this.Text = "frmUsuario";
             this.Load += new System.EventHandler(this.frmUsuario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,12 +149,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Label lblUI;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.MaskedTextBox txtUsername;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.PictureBox btnSalir;
-        private System.Windows.Forms.PictureBox btnHelp;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbxLogin;
+        private System.Windows.Forms.Label lblErrorVacio;
     }
 }

@@ -43,7 +43,7 @@ namespace FantaApp
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void btnOpenFanta_Click(object sender, EventArgs e)
