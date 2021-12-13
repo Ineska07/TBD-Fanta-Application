@@ -5,16 +5,29 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 namespace FantaApp
 {
     public partial class frmVentasAdd : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+      (
+          int nLeftRect,     // x-coordinate of upper-left corner
+          int nTopRect,      // y-coordinate of upper-left corner
+          int nRightRect,    // x-coordinate of lower-right corner
+          int nBottomRect,   // y-coordinate of lower-right corner
+          int nWidthEllipse, // height of ellipse
+          int nHeightEllipse // width of ellipse
+      );
         public DataGridView Dgv { get; set; }
         public DataTable contenidoOriginal = new DataTable();
         public frmVentasAdd()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
         private void frmVentasAdd_Load(object sender, EventArgs e)
@@ -91,9 +104,10 @@ namespace FantaApp
         {
             // TODO: esta línea de código carga datos en la tabla 'fANTA_BDDataSet.Producto' Puede moverla o quitarla según sea necesario.
             // this.productoTableAdapter.Fill(this.fANTA_BDDataSet.Producto);
-            string consultaC = "SELECT Nombre_Cliente AS 'Nombre' FROM Cliente";
+
 
             //Clientes
+            string consultaC = "SELECT Nombre_Cliente AS 'Nombre' FROM Cliente";
             SqlCommand consultaClientes = new SqlCommand(consultaC, BD.conectar());
             SqlDataAdapter r = new SqlDataAdapter();
             r.SelectCommand = consultaClientes;
@@ -129,7 +143,7 @@ namespace FantaApp
 
             cbxTdPago.Items.Add("Contado");
             cbxTdPago.Items.Add("Tarjeta");
-            cbxTdPago.Items.Add("Transferencia Bancaria");
+            cbxTdPago.Items.Add("Transferencia");
             cbxTdPago.Items.Add("Paypal");
         }
 

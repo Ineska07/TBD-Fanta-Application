@@ -33,7 +33,6 @@ namespace FantaApp
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-            rellenar(data);
         }
         private void rellenar(string[] contenido)
         {
@@ -42,8 +41,8 @@ namespace FantaApp
             txtExistencia.Text = contenido[2];
             txtPrecio.Text = contenido[3];
             txtTamaño.Text = contenido[4];
-            txtProveedor.Text = SacarNombreProveedor();
-            txtCategoria.Text = SacarNombreCategoria();
+            cbxProveedor.SelectedItem = SacarNombreProveedor();
+            cbxCategoria.SelectedItem = SacarNombreCategoria();
         }
         private void limpiar()
         {
@@ -51,8 +50,8 @@ namespace FantaApp
             txtPrecio.Text = "";
             txtTamaño.Text = "";
             txtExistencia.Text = "";
-            txtCategoria.Text = "";
-            txtProveedor.Text = "";
+            cbxCategoria.SelectedIndex = -1;
+            cbxProveedor.SelectedIndex = -1;
         }
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
@@ -61,7 +60,41 @@ namespace FantaApp
 
         private void frmFantaMod_Load(object sender, EventArgs e)
         {
+            buscarProveedor();
+            buscarCategoria();
+            rellenar(data);
+        }
+        public void buscarProveedor()
+        {
+            string consultaC = "SELECT Nombre_Proveedor FROM Proveedor";
+            SqlCommand consultaClientes = new SqlCommand(consultaC, BD.conectar());
+            SqlDataAdapter r = new SqlDataAdapter();
+            r.SelectCommand = consultaClientes;
 
+            DataTable datostabla = new DataTable();
+
+            r.Fill(datostabla);
+
+            for (int i = 0; i < datostabla.Rows.Count; i++)
+            {
+                cbxProveedor.Items.Add(datostabla.Rows[i][0].ToString());
+            }
+        }
+        public void buscarCategoria()
+        {
+            string consultaC = "SELECT Nombre_Categoria FROM Categoria";
+            SqlCommand consultaClientes = new SqlCommand(consultaC, BD.conectar());
+            SqlDataAdapter r = new SqlDataAdapter();
+            r.SelectCommand = consultaClientes;
+
+            DataTable datostabla = new DataTable();
+
+            r.Fill(datostabla);
+
+            for (int i = 0; i < datostabla.Rows.Count; i++)
+            {
+                cbxCategoria.Items.Add(datostabla.Rows[i][0].ToString());
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -117,7 +150,7 @@ namespace FantaApp
         {
             try
             {
-                string select = "SELECT Proveedor_ID FROM Proveedor WHERE Nombre_Proveedor = '" + txtProveedor.Text + "'";
+                string select = "SELECT Proveedor_ID FROM Proveedor WHERE Nombre_Proveedor = '" + cbxProveedor.SelectedItem.ToString() + "'";
                 SqlCommand consultaProveedor = new SqlCommand(select, BD.conectar());
                 SqlDataAdapter r = new SqlDataAdapter();
 
@@ -140,7 +173,7 @@ namespace FantaApp
         {
             try
             {
-                string select = "SELECT Categoria_ID FROM Categoria WHERE Nombre_Categoria = '" + txtCategoria.Text + "'";
+                string select = "SELECT Categoria_ID FROM Categoria WHERE Nombre_Categoria = '" + cbxCategoria.SelectedItem.ToString() + "'";
                 SqlCommand consultaCategoria = new SqlCommand(select, BD.conectar());
                 SqlDataAdapter r = new SqlDataAdapter();
 
@@ -160,7 +193,7 @@ namespace FantaApp
         }
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text == "" || txtCategoria.Text == "" || txtExistencia.Text == "" || txtPrecio.Text == "" || txtProveedor.Text == "" || txtTamaño.Text == "")
+            if (txtNombre.Text == "" || cbxCategoria.SelectedIndex == -1 || txtExistencia.Text == "" || txtPrecio.Text == "" || cbxProveedor.SelectedIndex == -1 || txtTamaño.Text == "")
             {
                 lblErrorVacio.Visible = true;
             }

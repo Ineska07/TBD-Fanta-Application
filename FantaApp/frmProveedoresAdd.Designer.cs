@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProveedoresAdd));
             this.lblErrorVacio = new System.Windows.Forms.Label();
             this.txtDetalles = new System.Windows.Forms.TextBox();
             this.lblProveedorDetalles = new System.Windows.Forms.Label();
@@ -216,7 +217,9 @@
             this.Controls.Add(this.lblProveedorTelefono);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblProveedorNombre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmProveedoresAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Añadir: Proveedores";
             this.Load += new System.EventHandler(this.frmProveedoresAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnLimpiar)).EndInit();

@@ -5,6 +5,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -14,6 +16,7 @@ using System.Windows.Forms;
 
 namespace FantaApp
 {
+    
     public partial class frmEmpleados : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -26,7 +29,7 @@ namespace FantaApp
           int nWidthEllipse, // height of ellipse
           int nHeightEllipse // width of ellipse
         );
-
+        public DataTable table = new DataTable();
         string consulta;
         string consultaBorrar;
 
@@ -45,6 +48,12 @@ namespace FantaApp
         {
             BD bd = new BD();
             bd.VerificarConexion(dgvBDEmpleados, consulta);
+            SqlCommand a = new SqlCommand(consulta, BD.conectar());
+            SqlDataAdapter r = new SqlDataAdapter();
+
+            r.SelectCommand = a;
+
+            r.Fill(table);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -126,6 +135,68 @@ namespace FantaApp
             else if (dialogResult == DialogResult.No)
             {
                 //do something else
+            }
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            printDocument1 = new PrintDocument();
+            PrinterSettings ps = new PrinterSettings();
+            printDocument1.PrinterSettings = ps;
+            printDocument1.PrintPage += Imprimir;
+            try
+            {
+                printDocument1.Print();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrio un error al Imprimir");
+            }
+        }
+
+        private void Imprimir(object sender, PrintPageEventArgs e)
+        {
+            string header = "Lista de Empleados";
+            Font font = new Font("Arial", 11, FontStyle.Regular);
+            Font fontColumnNames = new Font("Arial", 12, FontStyle.Bold);
+            Font fontHeader = new Font("Arial", 15, FontStyle.Bold);
+            Brush brush = new SolidBrush(Color.Black);
+            SizeF size;
+            float xPadding;
+            int columnCount = table.Columns.Count;
+            int x, y = 0, width = 160;
+            x = 0;
+            y += 30;
+            // Here title is written, sets to top-middle position of the page
+            size = e.Graphics.MeasureString(header, fontHeader);
+            xPadding = (width - size.Width) / 2;
+            e.Graphics.DrawString(header, fontHeader, brush, x + 300, y + 5);
+            x = 0;
+            y += 60;
+            // Writes out all column names in designated locations, aligned as a table
+            foreach (DataColumn column in table.Columns)
+            {
+                size = e.Graphics.MeasureString(column.ColumnName, fontColumnNames);
+                xPadding = (width - size.Width) / 2;
+                e.Graphics.DrawString(column.ColumnName, fontColumnNames, brush, x + xPadding, y + 5);
+                x += width;
+            }
+            x = 0;
+            y += 30;
+            // Process each row and place each item under correct column.
+            foreach (DataRow row in table.Rows)
+            {
+                for (int i = 0; i < columnCount; i++)
+                {
+                    size = e.Graphics.MeasureString(row[i].ToString(), font);
+                    xPadding = (width - size.Width) / 2;
+
+                    e.Graphics.DrawString(row[i].ToString(), font, brush, x + xPadding, y + 5);
+                    x += width;
+                }
+
+                x = 0;
+                y += 30;
             }
         }
     }

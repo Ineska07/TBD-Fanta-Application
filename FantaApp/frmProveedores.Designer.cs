@@ -41,6 +41,8 @@ namespace FantaApp
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.btnHelp = new System.Windows.Forms.PictureBox();
             this.btnBorrar = new System.Windows.Forms.PictureBox();
+            this.btnImprimir = new System.Windows.Forms.PictureBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBDProveedores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogotipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAñadir)).BeginInit();
@@ -48,6 +50,7 @@ namespace FantaApp
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBorrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnImprimir)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvBDProveedores
@@ -176,12 +179,26 @@ namespace FantaApp
             this.btnBorrar.TabStop = false;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.BackColor = System.Drawing.Color.Transparent;
+            this.btnImprimir.BackgroundImage = global::FantaApp.Properties.Resources.btnPrint;
+            this.btnImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnImprimir.InitialImage = null;
+            this.btnImprimir.Location = new System.Drawing.Point(297, 383);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(44, 40);
+            this.btnImprimir.TabIndex = 28;
+            this.btnImprimir.TabStop = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
             // frmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(872, 435);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.pbxLogotipo);
             this.Controls.Add(this.btnAñadir);
@@ -189,7 +206,9 @@ namespace FantaApp
             this.Controls.Add(this.dgvBDProveedores);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnHelp);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmProveedores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proveedores";
             this.Load += new System.EventHandler(this.frmProveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBDProveedores)).EndInit();
@@ -199,6 +218,7 @@ namespace FantaApp
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBorrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnImprimir)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,5 +232,7 @@ namespace FantaApp
         private System.Windows.Forms.PictureBox btnSalir;
         private System.Windows.Forms.PictureBox btnHelp;
         private System.Windows.Forms.PictureBox btnBorrar;
+        private System.Windows.Forms.PictureBox btnImprimir;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

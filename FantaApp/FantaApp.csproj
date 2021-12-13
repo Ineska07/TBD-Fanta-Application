@@ -330,6 +330,8 @@
     <None Include="Resources\btnEliminar.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Cotizacion_IMG.PNG" />
+    <None Include="Resources\btnPrint.png" />
     <None Include="Resources\btnIniciarSesion.png" />
     <Content Include="Resources\btnMinus.png" />
     <None Include="Resources\login.png" />

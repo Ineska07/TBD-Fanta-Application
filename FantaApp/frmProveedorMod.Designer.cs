@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProveedorMod));
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.PictureBox();
@@ -239,7 +240,9 @@
             this.Controls.Add(this.lblErrorVacio);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lblFantaAdd);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmProveedorMod";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar: Proveedor";
             this.Load += new System.EventHandler(this.frmProveedorMod_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnModificar)).EndInit();

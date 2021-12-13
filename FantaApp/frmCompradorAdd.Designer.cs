@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCompradorAdd));
             this.lblErrorVacio = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.PictureBox();
@@ -205,8 +206,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblFantaNombre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCompradorAdd";
-            this.Text = "frmCompradorAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Añadir Comprador";
             this.Load += new System.EventHandler(this.frmCompradorAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnLimpiar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();

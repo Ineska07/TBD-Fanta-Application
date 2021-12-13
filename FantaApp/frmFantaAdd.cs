@@ -37,18 +37,52 @@ namespace FantaApp
         private void frmFantaAdd_Load(object sender, EventArgs e)
         {
             BD bd = new BD();
+            buscarProveedor();
+            buscarCategoria();
         }
 
+        public void buscarProveedor()
+        {
+            string consultaC = "SELECT Nombre_Proveedor FROM Proveedor";
+            SqlCommand consultaClientes = new SqlCommand(consultaC, BD.conectar());
+            SqlDataAdapter r = new SqlDataAdapter();
+            r.SelectCommand = consultaClientes;
+
+            DataTable datostabla = new DataTable();
+
+            r.Fill(datostabla);
+
+            for (int i = 0; i < datostabla.Rows.Count; i++)
+            {
+                cbxProveedor.Items.Add(datostabla.Rows[i][0].ToString());
+            }
+        }
+        public void buscarCategoria()
+        {
+            string consultaC = "SELECT Nombre_Categoria FROM Categoria";
+            SqlCommand consultaClientes = new SqlCommand(consultaC, BD.conectar());
+            SqlDataAdapter r = new SqlDataAdapter();
+            r.SelectCommand = consultaClientes;
+
+            DataTable datostabla = new DataTable();
+
+            r.Fill(datostabla);
+
+            for (int i = 0; i < datostabla.Rows.Count; i++)
+            {
+                cbxCategoria.Items.Add(datostabla.Rows[i][0].ToString());
+            }
+        }
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private int SacarProveedor()
+        private int sacarProveedor()
         {
             try
             {
-                string select = "SELECT Proveedor_ID FROM Proveedor WHERE Nombre_Proveedor = '" + txtProveedor.Text + "'";
+                string select = "SELECT Proveedor_ID FROM Proveedor WHERE Nombre_Proveedor = '" + cbxProveedor.SelectedItem.ToString() + "'";
                 SqlCommand consultaProveedor = new SqlCommand(select, BD.conectar());
                 SqlDataAdapter r = new SqlDataAdapter();
 
@@ -67,11 +101,11 @@ namespace FantaApp
             return 0;
         }
 
-        private int SacarCategoria()
+        private int sacarCategoria()
         {
             try
             {
-                string select = "SELECT Categoria_ID FROM Categoria WHERE Nombre_Categoria = '" + txtCategoria.Text + "'";
+                string select = "SELECT Categoria_ID FROM Categoria WHERE Nombre_Categoria = '" + cbxCategoria.SelectedItem.ToString() + "'";
                 SqlCommand consultaCategoria = new SqlCommand(select, BD.conectar());
                 SqlDataAdapter r = new SqlDataAdapter();
 
@@ -92,7 +126,7 @@ namespace FantaApp
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text == "" || txtCategoria.Text == "" || txtExistencia.Text == "" || txtPrecio.Text == "" || txtProveedor.Text == "" || txtTamaño.Text == "")
+            if (txtNombre.Text == "" || cbxCategoria.SelectedIndex == -1 || txtExistencia.Text == "" || txtPrecio.Text == "" || cbxProveedor.SelectedIndex == -1 || txtTamaño.Text == "")
             {
                 lblErrorVacio.Visible = true;
             }
@@ -103,7 +137,7 @@ namespace FantaApp
                 Int32 idActual = (Int32)buscarID.ExecuteScalar();
 
                 string cadenaFanta = "INSERT INTO Producto (Producto_ID, Nombre_Producto, Existencia__Producto, Tamaño_Envase, Precio__Producto, Proveedor_ID, Categoria_ID) VALUES" +
-                " (" + (idActual + 1).ToString() + ", '" + txtNombre.Text + "', " + txtExistencia.Text + ", " + txtTamaño.Text + ", " + txtPrecio.Text + ", " + SacarProveedor().ToString() + ", " + SacarCategoria().ToString() + ")";
+                " (" + (idActual + 1).ToString() + ", '" + txtNombre.Text + "', " + txtExistencia.Text + ", " + txtTamaño.Text + ", " + txtPrecio.Text + ", " + sacarProveedor() + ", " + sacarCategoria() + ")";
                 try
                 {
                     SqlCommand insertFanta = new SqlCommand(cadenaFanta, BD.conectar());
@@ -128,8 +162,8 @@ namespace FantaApp
             txtPrecio.Text = "";
             txtTamaño.Text = "";
             txtExistencia.Text = "";
-            txtCategoria.Text = "";
-            txtProveedor.Text = "";
+            cbxCategoria.SelectedIndex = -1;
+            cbxProveedor.SelectedIndex = -1;
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

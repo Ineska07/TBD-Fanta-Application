@@ -93,6 +93,11 @@ namespace FantaApp
         {
             this.Close();
         }
+
+        private void frmCompradorMod_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

@@ -37,6 +37,7 @@ namespace FantaApp
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVentasAdd));
             this.lblFantaAdd = new System.Windows.Forms.Label();
             this.lblErrorVacio = new System.Windows.Forms.Label();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -477,7 +478,9 @@ namespace FantaApp
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnAñadir);
             this.Controls.Add(this.lblFantaAdd);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmVentasAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Añadir Orden";
             this.Load += new System.EventHandler(this.frmVentasAdd_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuario));
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.MaskedTextBox();
             this.lblUser = new System.Windows.Forms.Label();
@@ -136,8 +137,10 @@
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtPassword);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUsuario";
-            this.Text = "frmUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.frmUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

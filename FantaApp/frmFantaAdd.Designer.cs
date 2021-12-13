@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFantaAdd));
             this.txtExistencia = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtTamaño = new System.Windows.Forms.TextBox();
@@ -38,13 +39,13 @@
             this.lblFantaNombre = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.lblFantaAdd = new System.Windows.Forms.Label();
-            this.txtProveedor = new System.Windows.Forms.TextBox();
             this.lblProveedor = new System.Windows.Forms.Label();
-            this.txtCategoria = new System.Windows.Forms.TextBox();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.btnAñadir = new System.Windows.Forms.PictureBox();
             this.btnLimpiar = new System.Windows.Forms.PictureBox();
             this.lblErrorVacio = new System.Windows.Forms.Label();
+            this.cbxProveedor = new System.Windows.Forms.ComboBox();
+            this.cbxCategoria = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAñadir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLimpiar)).BeginInit();
@@ -142,13 +143,6 @@
             this.lblFantaAdd.TabIndex = 18;
             this.lblFantaAdd.Text = "Añadir a Fanta";
             // 
-            // txtProveedor
-            // 
-            this.txtProveedor.Location = new System.Drawing.Point(74, 148);
-            this.txtProveedor.Name = "txtProveedor";
-            this.txtProveedor.Size = new System.Drawing.Size(98, 20);
-            this.txtProveedor.TabIndex = 5;
-            // 
             // lblProveedor
             // 
             this.lblProveedor.AutoSize = true;
@@ -158,13 +152,6 @@
             this.lblProveedor.Size = new System.Drawing.Size(56, 13);
             this.lblProveedor.TabIndex = 19;
             this.lblProveedor.Text = "Proveedor";
-            // 
-            // txtCategoria
-            // 
-            this.txtCategoria.Location = new System.Drawing.Point(247, 148);
-            this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(77, 20);
-            this.txtCategoria.TabIndex = 6;
             // 
             // lblCategoria
             // 
@@ -213,18 +200,34 @@
             this.lblErrorVacio.Text = "Uno o mas campos estan vacios!";
             this.lblErrorVacio.Visible = false;
             // 
+            // cbxProveedor
+            // 
+            this.cbxProveedor.FormattingEnabled = true;
+            this.cbxProveedor.Location = new System.Drawing.Point(74, 148);
+            this.cbxProveedor.Name = "cbxProveedor";
+            this.cbxProveedor.Size = new System.Drawing.Size(98, 21);
+            this.cbxProveedor.TabIndex = 26;
+            // 
+            // cbxCategoria
+            // 
+            this.cbxCategoria.FormattingEnabled = true;
+            this.cbxCategoria.Location = new System.Drawing.Point(247, 148);
+            this.cbxCategoria.Name = "cbxCategoria";
+            this.cbxCategoria.Size = new System.Drawing.Size(77, 21);
+            this.cbxCategoria.TabIndex = 27;
+            // 
             // frmFantaAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(338, 258);
+            this.Controls.Add(this.cbxCategoria);
+            this.Controls.Add(this.cbxProveedor);
             this.Controls.Add(this.lblErrorVacio);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnAñadir);
-            this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.lblCategoria);
-            this.Controls.Add(this.txtProveedor);
             this.Controls.Add(this.lblProveedor);
             this.Controls.Add(this.lblFantaAdd);
             this.Controls.Add(this.btnSalir);
@@ -236,8 +239,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblFantaNombre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmFantaAdd";
-            this.Text = "Añadir: Fanta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Añadir: Producto";
             this.Load += new System.EventHandler(this.frmFantaAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAñadir)).EndInit();
@@ -259,12 +264,12 @@
         private System.Windows.Forms.Label lblFantaNombre;
         private System.Windows.Forms.PictureBox btnSalir;
         private System.Windows.Forms.Label lblFantaAdd;
-        private System.Windows.Forms.TextBox txtProveedor;
         private System.Windows.Forms.Label lblProveedor;
-        private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.PictureBox btnAñadir;
         private System.Windows.Forms.PictureBox btnLimpiar;
         private System.Windows.Forms.Label lblErrorVacio;
+        private System.Windows.Forms.ComboBox cbxProveedor;
+        private System.Windows.Forms.ComboBox cbxCategoria;
     }
 }
