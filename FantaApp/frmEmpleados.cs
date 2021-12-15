@@ -63,7 +63,7 @@ namespace FantaApp
 
         private string[] encontrarFila(int index)
         {
-            string encontrar = "Select * FROM Empleados WHERE Empleados_ID = " + ((int)index + 1);
+            string encontrar = "Select * FROM Empleados WHERE Nombre_Empleado = '" + dgvBDEmpleados.Rows[dgvBDEmpleados.CurrentCell.RowIndex].Cells[0].Value.ToString() + "'";
             SqlCommand Fila = new SqlCommand(encontrar, BD.conectar());
             SqlDataAdapter r = new SqlDataAdapter();
 
@@ -128,7 +128,7 @@ namespace FantaApp
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Se ha producido un error. Datos no validados.");
+                        MessageBox.Show("No se puede borrar porque el elemento esta siendo utilizado en otra tabla.");
                     }
                 }
             }

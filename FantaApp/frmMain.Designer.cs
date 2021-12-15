@@ -30,7 +30,6 @@ namespace FantaApp
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            this.lblWIP = new System.Windows.Forms.Label();
             this.btnOpenProveedores = new System.Windows.Forms.PictureBox();
             this.btnOpenVentas = new System.Windows.Forms.PictureBox();
             this.btnOpenCompradores = new System.Windows.Forms.PictureBox();
@@ -48,17 +47,6 @@ namespace FantaApp
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogotipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblWIP
-            // 
-            this.lblWIP.AutoSize = true;
-            this.lblWIP.BackColor = System.Drawing.Color.Transparent;
-            this.lblWIP.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblWIP.Location = new System.Drawing.Point(12, 344);
-            this.lblWIP.Name = "lblWIP";
-            this.lblWIP.Size = new System.Drawing.Size(92, 13);
-            this.lblWIP.TabIndex = 5;
-            this.lblWIP.Text = "*Work in Progress";
             // 
             // btnOpenProveedores
             // 
@@ -173,7 +161,6 @@ namespace FantaApp
             this.Controls.Add(this.btnOpenFanta);
             this.Controls.Add(this.btnEmpleados);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.lblWIP);
             this.Controls.Add(this.pbxLogotipo);
             this.Controls.Add(this.btnHelp);
             this.DoubleBuffered = true;
@@ -193,7 +180,6 @@ namespace FantaApp
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogotipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -201,7 +187,6 @@ namespace FantaApp
 
         private System.Windows.Forms.PictureBox btnHelp;
         private System.Windows.Forms.PictureBox pbxLogotipo;
-        private System.Windows.Forms.Label lblWIP;
         private System.Windows.Forms.PictureBox btnSalir;
         private System.Windows.Forms.PictureBox btnOpenVentas;
         private System.Windows.Forms.PictureBox btnOpenCompradores;

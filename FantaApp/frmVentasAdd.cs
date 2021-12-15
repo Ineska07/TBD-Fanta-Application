@@ -122,7 +122,7 @@ namespace FantaApp
             }
 
             //Fecha
-            lblFechaActual.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            lblFechaActual.Text = DateTime.Now.ToString("MM/dd/yyyy");
 
             //Productos
             string consultaP = "SELECT Nombre_Producto AS 'Nombre', Tamaño_Envase AS 'Tamaño (ml)', Precio__Producto AS 'Precio', Existencia__Producto AS 'Existencia' FROM Producto";

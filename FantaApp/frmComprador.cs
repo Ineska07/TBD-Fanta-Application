@@ -79,7 +79,7 @@ namespace FantaApp
 
         private string[] encontrarFila(int index)
         {
-            string encontrar = "Select * FROM CLIENTE WHERE Cliente_ID = " + ((int)index + 1);
+            string encontrar = "Select * FROM CLIENTE WHERE Nombre_Cliente = '" + dgvBDComprador.Rows[dgvBDComprador.CurrentCell.RowIndex].Cells[0].Value.ToString() + "'";
             SqlCommand Fila = new SqlCommand(encontrar, BD.conectar());
             SqlDataAdapter r = new SqlDataAdapter();
 
@@ -122,7 +122,7 @@ namespace FantaApp
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Se ha producido un error. Datos no validados.");
+                        MessageBox.Show("No se puede borrar porque el elemento esta siendo utilizado en otra tabla.");
                     }
                 }
             }
@@ -149,7 +149,7 @@ namespace FantaApp
         }
         private void Imprimir(object sender, PrintPageEventArgs e)
         {
-            string header = "Lista de Empleados";
+            string header = "Lista de Compradores";
             Font font = new Font("Arial", 14, FontStyle.Regular);
             Font fontColumnNames = new Font("Arial", 16, FontStyle.Bold);
             Font fontHeader = new Font("Arial", 18, FontStyle.Bold);

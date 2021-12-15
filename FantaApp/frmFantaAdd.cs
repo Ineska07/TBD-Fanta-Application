@@ -29,6 +29,7 @@ namespace FantaApp
 
         public frmFantaAdd()
         {
+            
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
